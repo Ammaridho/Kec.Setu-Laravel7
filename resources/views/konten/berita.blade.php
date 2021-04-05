@@ -1,3 +1,6 @@
+@extends('layouts.main')
+
+@section('content')
   <div class="row">
         <div class="col-sm-12 mt-3 ml-3">
             <h4 id="judulBerita">PEMKOT TANGSEL PERINGATI KOPERASI KE-73</h4>
@@ -14,3 +17,4 @@
         </div>
         
     </div>
+@endsection

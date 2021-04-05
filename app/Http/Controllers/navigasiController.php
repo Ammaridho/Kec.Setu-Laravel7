@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class navigasiController extends Controller
 {
     function index(){
-        return view('main');
+        return view('/layouts/main');
     }
 }

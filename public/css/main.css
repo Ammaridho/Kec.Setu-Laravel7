@@ -3,6 +3,7 @@ body{
     background-image: url("/img/bi.jpeg");
     background-repeat: repeat-x;
     background-attachment: fixed;
+    font-family: Arial;
 }
 
 #containerUtama{
@@ -63,7 +64,6 @@ margin-top: -2px;
     background-color: rgb(23,165,137);
 }
 
-
 .bannertop{
     height: 130px;
     background-position: center;
@@ -84,20 +84,22 @@ margin-top: -2px;
 #headerlayer3{
     border-bottom: 5px solid rgb(23,165,137);
     height: 53px;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0.5px;
 }
 
 
 /* nav atas */
 .nav-item  {
-    height: 36px;
-    line-height: 20px;
+    /* height: 36px; */
+    line-height: 27px;
+    padding-left: 5px;
+    text-align: center;
 }
 
 #ygborder{
     border-left: solid 0.1px rgb(29, 29, 29);
-    height: 36px;
+    /* height: 42px; */
 }
 /* akhir nav atas */
 
@@ -105,22 +107,30 @@ margin-top: -2px;
     width: 100%;
     height: 49px;
     z-index: 10000;
-    background-color: #2E2E2E;
+    background-color: #2e2e2ef6;
 }
 
 #navbaratasCollapse{
     height: 25px;
-    /* width: 100%; */
     z-index: 10000;
 }
 
 .dropdown-item{
     font-size: 10px;
     color:white;
+    border-top: 0.1px solid rgba(0, 0, 0, 0.192);
 }
 
 .dropdown-menu{
-    background-color: #2E2E2E;
+    border-top: 1px solid rgb(23,165,137);
+    background-color: #2e2e2ef6;
+}
+
+#navbarNavDropdown{
+    background-color: #2e2e2ef6;
+    border-top: 0.1px solid rgba(0, 0, 0, 0.192);
+    text-align: left;
+
 }
 
 /* HeadLine News */
@@ -132,7 +142,7 @@ margin-top: -2px;
 
 #miniheader2{
     height: 29px; 
-    width: 935px;
+    width: 89%;
 }
 
 #hntext{
@@ -162,7 +172,7 @@ margin-top: -2px;
     margin-top: 6px;
     margin-left: -5px;
     box-shadow: 0 0 5px #cacaca;
-    height: 400px;
+    height:fit-content;
     border-bottom: 5px solid rgb(23,165,137);
 }
 
@@ -216,7 +226,7 @@ margin-top: -2px;
 
 #gambartabbaru{
     margin-left: 20px;
-    width: 131px;
+    width: 100%;
     box-shadow: rgb(181, 181, 181) 0px 0px 2px 0px;
 }
 
@@ -241,7 +251,7 @@ margin-top: -2px;
 /* Footer ============================================================================================== */
 
 #footer1{
-    height: 397px;
+    height:fit-content;
     border-top: 4px solid rgb(23,165,137);
     background-color: #333333;
 }
@@ -262,6 +272,12 @@ margin-top: -2px;
 #tautanfooter{
     font-size: 13px;
     margin-bottom: 10px;
+    text-decoration-line: none;
+}
+
+#aks{
+    font-size: 13px;
+    line-height: 16px;
 }
 
 #footer2{
@@ -273,25 +289,19 @@ margin-top: -2px;
 /* Akhir Footer ====================================================================================== */
 
 /* Respondsive ===================================================================================== */
-@media (max-width: 576px) {
+@media (max-width: 766px) {
     #containerUtama{
         width:473px;
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 766px) {
     #containerUtama{
-        width:490px;
+        width:766px;
     }
 }
 
-@media (min-width: 768px) {
-    #containerUtama{
-        width:750px;
-    }
-}
-
-@media (min-width: 840px) {
+@media (min-width: 1045px) {
     #containerUtama{
         width:1045px;
     }
