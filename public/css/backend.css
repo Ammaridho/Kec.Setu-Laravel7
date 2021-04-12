@@ -1,0 +1,31 @@
+body{
+    background-image: url("/img/bi.jpeg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    font-family: Arial;
+}
+
+#navbaratas{
+    width: 100%;
+    background-color: rgb(23,165,137);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#navigasi{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#isi{
+    margin-left: -20px;
+}
+
+#beranda{
+    background-color: rgba(0, 0, 0, 0.671);
+    color: rgb(253, 253, 253);
+}
+
+#bacabacaan{
+    padding: 20px;
+    background-color: antiquewhite;
+}
