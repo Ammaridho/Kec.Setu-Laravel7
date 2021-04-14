@@ -53,11 +53,6 @@ Route::post('/','navigasiController@storeformpengaduan');  //proses input
 
 
 
-
-
-
-
-
 //backend ===================================================================================================
 
 //index
@@ -68,11 +63,13 @@ Route::get('/backendinputbacaan','backendController@inputbacaan');
 Route::post('/backendindex','backendController@storebackendinputbacaan');
 
 //baca bacaan
-Route::get('/bacaan/{judul}','backendController@bacabacaan');
+Route::get('/bacaan/{id}','backendController@bacabacaan');
 
+//baca pengaduan
+Route::get('/pengaduan/{id}','backendController@bacapengaduan');
 
 //hapus bacaan
-Route::delete('/backendindex/{id}','backendController@destroybacaan');
+Route::delete('/backendindex/bacaan/{id}','backendController@destroybacaan');
 
 //hapus pengaduan
-Route::delete('/backendindex/{id}','backendController@destroypengaduan');
+Route::delete('/backendindex/pengaduan/{id}','backendController@destroypengaduan');

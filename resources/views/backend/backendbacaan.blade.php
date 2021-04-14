@@ -28,6 +28,9 @@
 
         <h1 style="font-family: BebasNeueRegular; font-size:28px; font-weight:bold; text-align:center; ">{{$bacaan->judul}}</h1>
         <br>
+        {{-- {{dd($bacaan->gambar_bacaan[0])}} --}}
+        <img src="/img/gambar_bacaan/{{$bacaan->gambar}}" alt="error" id="gambartabbaru" style="display: block; margin-left: auto; margin-right: auto; height: 200px;">
+        <br>
         <pre style=" font-size: 13px; border:0px; white-space: pre-wrap;" disabled>{{$bacaan->isi}}</pre style="width: 100%; height: 400px;">
 
         </div>

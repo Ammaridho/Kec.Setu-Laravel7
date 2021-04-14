@@ -131,6 +131,7 @@ margin-top: -2px;
 #navbarNavDropdown{
     border-top: 0.1px solid rgba(0, 0, 0, 0.192);
     text-align: left;
+    background-color: #2e2e2ef6;
 }
 
 /* HeadLine News */

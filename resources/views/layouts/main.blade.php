@@ -23,7 +23,7 @@
             <div class="row bg-light" id="headerlayer1">
 
                 <div class="col-sm-3" id="divtanggalheader">
-                    <input type="text" name="search" value="31 Maret 2021" id="tanggalheader" disabled>
+                    <input type="text" name="search" value="{{Carbon\Carbon::now()->format('d  M  Y')}}" id="tanggalheader" disabled>
                 </div>
 
                 <div class="col-sm-9" id="divsearchtextinput">
@@ -184,9 +184,9 @@
 
                                     <div class="row mt-1 mb-2" >
                                         <div class="col-5">
-                                            @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars)
-                                                    <img src="/img/gambar_berita/{{$gambars->gambar}}" alt="error" id="gambartabbaru">
-                                            @endforeach
+                                            {{-- @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars) --}}
+                                                    <img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru">
+                                            {{-- @endforeach --}}
                                         </div>
                                         
                                         <div class="col-7">

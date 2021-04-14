@@ -16,95 +16,103 @@ class navigasiController extends Controller
 {
     public function index(){
 
-        $bacaan = bacaan::all();
-        $gambar_bacaan = gambar_bacaan::all();
+        // $bacaan = bacaan::with('gambar_bacaan')->orderBy('id', 'desc')->paginate();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $berita = bacaan::where('perihal','berita')->orderBy('id', 'desc')->paginate(3);
+        $kegiatan = bacaan::where('perihal','kegiatan')->orderBy('id', 'desc')->paginate(3);
+        $artikel = bacaan::where('perihal','artikel')->orderBy('id', 'desc')->paginate(3);
+        // dd($berita);
+        // $gambar_bacaan = gambar_bacaan::all();
 
         //untuk jumbotron
-        $idmax = gambar_bacaan::max('id'); 
-        $gambar_satuan = gambar_bacaan::find($idmax); 
-        $bacaan_satuan = bacaan::find($idmax);
-        $gambar_terbaru = gambar_bacaan::orderBy('id', 'desc')->paginate(3);
-        $bacaan_terbaru = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $idmax = bacaan::max('id'); 
+        // dd($idmax);
+        // $gambar_satuan = gambar_bacaan::find($idmax); 
+        // $bacaan_satuan = bacaan::find($idmax);
+        // $gambar_terbaru = gambar_bacaan::orderBy('id', 'desc')->paginate(3);
+        // $bacaan_terbaru = bacaan::orderBy('id', 'desc')->paginate(3);
 
-        return view('konten/index',compact('gambar_satuan','bacaan_satuan','gambar_terbaru','bacaan_terbaru','bacaan','gambar_bacaan'));
+        return view('konten/index',compact('bacaan','berita','kegiatan','artikel'));
     }
 
     public function deskripsi($id_deskripsi){
         $deskripsi = deskripsi::find($id_deskripsi); //isi dari tulisan biasa
         
-        $bacaan = bacaan::all();
-        $gambar_bacaan = gambar_bacaan::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $gambar_bacaan = gambar_bacaan::all();
         
-        return view('konten.deskripsi',compact('deskripsi','bacaan','gambar_bacaan'));
+        return view('konten.deskripsi',compact('deskripsi','bacaan'));
     }
 
     public function isibacaan($id){
-        $bacaan = bacaan::find($id);     
-        $gambar_bacaan = gambar_bacaan::find($id);
+        $bacaandetail = bacaan::find($id);     
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $gambar_bacaan = gambar_bacaan::find($id);
         // dd($bacaan);
-        return view('konten.bacaan',compact('bacaan','gambar_bacaan'));
+        return view('konten.bacaan',compact('bacaandetail','bacaan'));
     }
 
     public function profilkelurahan($nama)
     {
-        $bacaan = bacaan::all();
-        $gambar_bacaan = gambar_bacaan::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $gambar_bacaan = gambar_bacaan::all();
 
         $kelurahan = kelurahan::where('nama' , $nama)->first();
         // dd($kelurahan);
-        return view('konten.profilkelurahan',compact('kelurahan','bacaan','gambar_bacaan'));
+        return view('konten.profilkelurahan',compact('kelurahan','bacaan'));
     }
 
     public function perda()
     {
-        $bacaan = bacaan::all();
-        $gambar_bacaan = gambar_bacaan::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $gambar_bacaan = gambar_bacaan::all();
 
         $peraturan = perda::all();
 
         $namaaturan = "Peraturan Daerah";
 
-        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan','gambar_bacaan'));
+        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan'));
     }
 
     public function perwal()
     {
-        $bacaan = bacaan::all();
-        $gambar_bacaan = gambar_bacaan::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $gambar_bacaan = gambar_bacaan::all();
 
         $peraturan = perwal::all();
 
         $namaaturan = "Peraturan Walikota";
 
-        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan','gambar_bacaan'));
+        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan'));
     }
 
     public function kepwal()
     {
-        $bacaan = bacaan::all();
-        $gambar_bacaan = gambar_bacaan::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $gambar_bacaan = gambar_bacaan::all();
 
         $peraturan = kepwal::all();
 
         $namaaturan = "Keputusan Walikota";
 
-        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan','gambar_bacaan'));
+        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan'));
     }
 
     public function beritakecamatan()
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(7);     
-        $gambar_bacaan = gambar_bacaan::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);    
+        $semuabacaan = bacaan::orderBy('id', 'desc')->paginate();
+        // $gambar_bacaan = gambar_bacaan::all();
 
-        return view('konten.beritakecamatan',compact('bacaan','gambar_bacaan'));
+        return view('konten.beritakecamatan',compact('bacaan','semuabacaan'));
     }
 
     public function formpengaduan()
     {
-        $bacaan = bacaan::all();
-        $gambar_bacaan = gambar_bacaan::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        // $gambar_bacaan = gambar_bacaan::all();
 
-        return view('konten/formpengaduan',compact('bacaan','gambar_bacaan'));
+        return view('konten/formpengaduan',compact('bacaan'));
     }
 
     public function storeformpengaduan(Request $request)

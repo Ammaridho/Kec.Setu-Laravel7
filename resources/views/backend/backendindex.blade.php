@@ -32,18 +32,23 @@
                 @foreach ($bacaan as $a)
                   <div class="col card m-2">
                     <div class="card-body">
-
-                        <h1 style="font-family: BebasNeueRegular; font-size:28px; font-weight:bold;">{{$a->judul}}</h1>
+                        {{-- <h1>aa{{$a->gambar_bacaan[0]->gambar}}</h1> --}}
+                        <h1 style="font-family: BebasNeueRegular; font-size:28px; font-weight:bold; text-align:center;">{{$a->judul}}</h1>
+                        <h1 style=" font-size:10px;">postedby: {{$a->postedby}}</h1>
                         <h1 style=" font-size:10px;">dibuat: {{$a->created_at}}</h1>
                         <h1 style=" font-size:10px; margin-bottom:-15px;">diupdate: {{$a->cupdated_at}}</h1>
+
                         <br>
-                        <pre style=" height: 100px; font-size: 13px; border:0px; white-space: pre-wrap;" disabled>{{$a->isi}}</pre style="width: 100%; height: 400px;">
+                        <img src="/img/gambar_bacaan/{{$a->gambar}}" alt="error" id="gambartabbaru" style="height: 125px;display: block; margin-left: auto; margin-right: auto;">
+                        
+                        <br>
+                        <pre style=" height: 50px; font-size: 13px; border:0px; white-space: pre-wrap;" disabled>{{$a->isi}}</pre style="width: 100%; height: 400px;">
               
 
                         <div class="row">
                           <div class="col-2">
                             {{-- button lihat --}}
-                            <a href="/bacaan/{{$a->judul}}" class="btn btn-info btn-sm" style="font-size: 75%;">Baca</a>
+                            <a href="/bacaan/{{$a->id}}" class="btn btn-info btn-sm" style="font-size: 75%;">Baca</a>
             
                             {{-- button edit --}}
                             <a href="/bacaan/{{$a->id}}/edit" class="btn btn-info btn-sm" style="font-size: 75%;">Edit</a>
@@ -51,7 +56,7 @@
 
                           <div class="col-10">
                               {{-- button hapus --}}
-                              <form action="/backendindex/{{$a->id}}"  method="post">
+                              <form action="/backendindex/bacaan/{{$a->id}}"  method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-sm btn-danger">Hapus</button>
@@ -64,7 +69,7 @@
 
                 <div>
                   {{-- link pindah halaman untuk melihat data selanjutnya  --}}
-                  {{ $bacaan->links() }}
+                  {{-- {{ $bacaan->links() }} --}}
                 </div>
 
               </div>
@@ -85,6 +90,7 @@
                     <div class="card-body">
 
                         <h1 style="font-family: BebasNeueRegular; font-size:28px; font-weight:bold;">{{$a->perihal}}</h1>
+                        <h1 style=" font-size:10px;">penulis: {{$a->nama}}</h1>
                         <h1 style=" font-size:10px; margin-bottom:-15px;">dibuat: {{$a->created_at}}</h1>
                         <br>
                         <pre style=" height: 100px; font-size: 13px; border:0px; white-space: pre-wrap;" disabled>{{$a->deskripsi}}</pre style="width: 100%; height: 400px; ">
@@ -93,12 +99,12 @@
                         <div class="row">
                           <div class="col-2">
                             {{-- button lihat --}}
-                            <a href="/bacaan/{{$a->judul}}" class="btn btn-info btn-sm">Baca</a>
+                            <a href="/pengaduan/{{$a->id}}" class="btn btn-info btn-sm">Baca</a>
                           </div>
 
                           <div class="col-10">
                               {{-- button hapus --}}
-                              <form action="/backendindex/{{$a->id}}"  method="post">
+                              <form action="/backendindex/pengaduan/{{$a->id}}"  method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-sm btn-danger">Hapus</button>
@@ -111,7 +117,7 @@
 
                 <div>
                   {{-- link pindah halaman untuk melihat data selanjutnya  --}}
-                  {{ $bacaan->links() }}
+                  {{-- {{ $bacaan->links() }} --}}
                 </div>
 
               </div>
