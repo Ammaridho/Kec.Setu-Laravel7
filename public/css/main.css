@@ -135,6 +135,24 @@ margin-top: -2px;
 }
 
 /* HeadLine News */
+.wadah-mengetik
+{
+	font-size: 22px;
+	width: 740px;
+	white-space:nowrap;
+	overflow:hidden;
+	-webkit-animation: ketik 2s steps(20, end);
+	animation: ketik 2s steps(20, end);
+}
+
+@keyframes ketik{
+		from { width: 0; }
+}
+
+@-webkit-keyframes ketik{
+		from { width: 0; }
+}
+
 #miniheader1{
     background-color: rgb(23,165,137);
     width: 110px;
@@ -245,6 +263,15 @@ margin-top: -2px;
     font-size: 13px;
     font-family: Arial;
 }
+#btntag{
+    outline: rgb(68, 68, 68) dashed 0px;
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 2px 0px inset, rgba(0, 0, 0, 0.1) 0px 0px 2px 0px;
+    font-size: 11px;
+    padding: 2px;
+    border: 1px solid  #E9E9E9;
+    color:  #444444;
+}
 
 #judultab{
     text-indent: -9px;
@@ -294,6 +321,14 @@ margin-top: -2px;
     font-weight: bold;
     border-bottom: 1px solid black;
     padding-bottom: 10px;
+}
+
+#btntagbawah{
+    font-size: 11px;
+    padding: 5px;
+    border: 2px solid rgb(23,165,137);
+    background-color: #333333;
+    color: white;
 }
 
 .isikontenfooter{

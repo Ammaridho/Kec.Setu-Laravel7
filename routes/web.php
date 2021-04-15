@@ -46,6 +46,9 @@ Route::get('/kepwal','navigasiController@kepwal');
 //berita kecamatan
 Route::get('/beritakecamatan','navigasiController@beritakecamatan');
 
+//tag
+Route::get('/tags/{perihal}','navigasiController@tags');
+
 
 //input pengaduan
 Route::get('/formpengaduan','navigasiController@formpengaduan'); //keform
@@ -65,11 +68,14 @@ Route::post('/backendindex','backendController@storebackendinputbacaan');
 //baca bacaan
 Route::get('/bacaan/{id}','backendController@bacabacaan');
 
-//baca pengaduan
-Route::get('/pengaduan/{id}','backendController@bacapengaduan');
+//edit bacaan
+Route::get('/bacaan/{id}/edit','backendController@editbacaan');
 
 //hapus bacaan
 Route::delete('/backendindex/bacaan/{id}','backendController@destroybacaan');
+
+//baca pengaduan
+Route::get('/pengaduan/{id}','backendController@bacapengaduan');
 
 //hapus pengaduan
 Route::delete('/backendindex/pengaduan/{id}','backendController@destroypengaduan');

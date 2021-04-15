@@ -63,7 +63,7 @@
                         <img src="/img/gambar_bacaan/{{$berita[0]->gambar}}" alt="error" id="gambarberitaindex" style="width: 90%; margin-left: 20px;">
                         <h5 id="judulgambarberitaindex">{{$berita[0]->judul}}</h5>
                         <h6 id="tanggalgambarberitaindex">{{$berita[0]->tanggal}}</h6>
-                        <p id="tulisannormal">{{$berita[0]->isi}}</p>
+                        <p id="tulisannormal">{{substr($berita[0]->isi,0,45)}}..</p>
                         <div class="readmore"><a href="" id="tulisannormal" style="color: black">Read More >></a></div>
 
                     </div>
@@ -111,7 +111,7 @@
                 <img src="/img/gambar_bacaan/{{$kegiatan[0]->gambar}}" alt="error" id="gambarberitaindex">
                 <h5 id="judulgambarberitaindex">{{$kegiatan[0]->judul}}</h5>
                 <h6 id="tanggalgambarberitaindex">{{$kegiatan[0]->tanggal}}</h6>
-                <p id="tulisannormal">{{$kegiatan[0]->isi}}</p>
+                <p id="tulisannormal">{{substr($kegiatan[0]->isi,0,45)}}</p>
                 <div class="readmore mb-3"><a href="" id="tulisannormal" style="color: black;">Read More >></a></div>
      
 
@@ -149,7 +149,7 @@
                 <img src="/img/gambar_bacaan/{{$artikel[0]->gambar}}" alt="error" id="gambarberitaindex" >
                 <h5 id="judulgambarberitaindex">{{$artikel[0]->judul}}</h5>
                 <h6 id="tanggalgambarberitaindex">{{$artikel[0]->tanggal}}</h6>
-                <p id="tulisannormal">{{$artikel[0]->isi}}</p>
+                <p id="tulisannormal">{{substr($artikel[0]->isi,0,45)}}</p>
                 <div class="readmore"><a href="" id="tulisannormal" style="color: black">Read More >></a></div>
 
                 <div class="row pt-2 mt-2" style="background-color:#F7F7F7; box-shadow: 0 0 5px #cacaca; margin-left:-10px;">

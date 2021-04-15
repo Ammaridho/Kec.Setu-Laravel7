@@ -107,6 +107,14 @@ class navigasiController extends Controller
         return view('konten.beritakecamatan',compact('bacaan','semuabacaan'));
     }
 
+    public function tags($perihal)
+    {
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $tags = bacaan::where('perihal',$perihal)->orderBy('id', 'desc')->paginate();
+        // dd($bacaan);
+        return view('konten.tags'.compact('bacaan','tags'));
+    }
+
     public function formpengaduan()
     {
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);

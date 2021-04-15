@@ -72,6 +72,12 @@ class backendController extends Controller
         return view('backend/backendbacaan',compact('bacaan'));
     }   
 
+    public function editbacaan($id)
+    {
+        $bacaan = bacaan::find($id);
+        return view('konten.backendeditbacaan',compact('bacaan'));
+    }
+
     public function bacapengaduan($id)
     {
         $pengaduan = pengaduan::where('id' , $id)->first();

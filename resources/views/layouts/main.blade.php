@@ -143,8 +143,25 @@
                 <div class="col-fluid shadow-md p-1" id="miniheader1">
                     <h6 id="hntext">HEADLINE NEWS</h6>
                 </div>
+
                 <div class="col-fluid shadow-md p-1 bg-light" id="miniheader2">
-                    <h6 id="isihntext">Ini adalah berita berita terbaru</h6>
+                   
+                    <div id="carouselExampleCaptions miniheader2" data-ride="carousel">
+            
+                        <div class="carousel-inner">
+            
+                            <div class="carousel-item active">
+                                <a href="../{{$bacaan[0]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[0]->judul}}</p>
+                            </div>
+            
+                            @for ($i = 1; $i < count($bacaan); $i++)
+                                <div class="carousel-item">
+                                    <a href="../{{$bacaan[$i]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[$i]->judul}}</p></a>
+                                </div>
+                            @endfor
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         <!-- Akhir Mini Header =====================================================================================-->
@@ -185,12 +202,12 @@
                                     <div class="row mt-1 mb-2" >
                                         <div class="col-5">
                                             {{-- @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars) --}}
-                                                    <img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru">
+                                            <a href="../{{$item->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru"></a>
                                             {{-- @endforeach --}}
                                         </div>
                                         
                                         <div class="col-7">
-                                            <a href="../{{$item->id}}/isibacaan"><p style="font-size:13px; font-weight:400px; line-height:15px;">{{$item->judul}}</p></a>
+                                            <a href="../{{$item->id}}/isibacaan"><p style="font-size:13px; font-weight:400px; line-height:15px; color:black;">{{$item->judul}}</p></a>
                                             <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->tanggal}}</p>
                                         </div>
                                         
@@ -199,7 +216,11 @@
                                 @endforeach
 
                             </div>
-                            <div class="tab-pane fade" id="tags" role="tabpanel" aria-labelledby="tags-tab">Tags</div>
+                            <div class="tab-pane fade pt-3 pb-3" id="tags" role="tabpanel" aria-labelledby="tags-tab">
+                                <a href="../tags/{{'berita'}}"><button id="btntag">Berita</button></a>
+                                <a href="../tags/{{'kegiatan'}}"><button id="btntag">Kegiatan</button></a>
+                                <a href="../tags/{{'artikel'}}"><button id="btntag">Artikel</button></a>
+                            </div>
                         </div>
                     </div>
 
@@ -238,10 +259,10 @@
                     </div>
 
                     <div class="bg-white rounded mb-4 p-2 text-center" id="contentkanan">
-                        <a href=""><img src="/img/icon/youtube.png" alt="iconyoutube" id="iconsm"></a>
-                        <a href=""><img src="/img/icon/facebook.png" alt="iconfacebook" id="iconsm"></a>
-                        <a href=""><img src="/img/icon/twitter.png" alt="icontwitter" id="iconsm"></a>
-                        <a href=""><img src="/img/icon/instagram.png" alt="iconinstagram" id="iconsm"></a>
+                        <a href="https://www.youtube.com/channel/UCiv-tVNor79V-nnRDp-fRqQ"><img src="/img/icon/youtube.png" alt="iconyoutube" id="iconsm"></a>
+                        <a href="https://www.facebook.com/HumasTangsel/"><img src="/img/icon/facebook.png" alt="iconfacebook" id="iconsm"></a>
+                        <a href="https://twitter.com/humastangsel/"><img src="/img/icon/twitter.png" alt="icontwitter" id="iconsm"></a>
+                        <a href="https://www.instagram.com/humaskotatangsel/"><img src="/img/icon/instagram.png" alt="iconinstagram" id="iconsm"></a>
                     </div>
 
                     <div class="row">
@@ -271,7 +292,9 @@
                 <div class="col-md-4">
                     <h5 id="judulfooter">TAG TERKAIT</h5>
                     <div class="isikontenfooter">
-
+                        <button id="btntagbawah">Berita</button>
+                        <button id="btntagbawah">Kegiatan</button>
+                        <button id="btntagbawah">Artikel</button>
                     </div>
                 </div>
                 <div class="col-md-4">
