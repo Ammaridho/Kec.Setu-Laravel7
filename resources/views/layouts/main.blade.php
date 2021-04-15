@@ -23,6 +23,8 @@
             <div class="row bg-light" id="headerlayer1">
 
                 <div class="col-sm-3" id="divtanggalheader">
+                    {{-- {{'locale' => 'id'}} --}}
+
                     <input type="text" name="search" value="{{Carbon\Carbon::now()->format('d  M  Y')}}" id="tanggalheader" disabled>
                 </div>
 
@@ -208,7 +210,7 @@
                                         
                                         <div class="col-7">
                                             <a href="../{{$item->id}}/isibacaan"><p style="font-size:13px; font-weight:400px; line-height:15px; color:black;">{{$item->judul}}</p></a>
-                                            <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->tanggal}}</p>
+                                            <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->created_at}}</p>
                                         </div>
                                         
                                     </div>

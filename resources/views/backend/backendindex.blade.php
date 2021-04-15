@@ -10,7 +10,7 @@
               <a class="list-group-item list-group-item-action" id="pengaduan-list" data-toggle="list" href="#pengaduan" role="tab" aria-controls="messages" style="font-size: 75%">Pengaduan</a>
             </div>
           </div>
-          <div class="col-9" id="isi">
+          <div class="col-9" id="isiindex">
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="beranda" role="tabpanel" aria-labelledby="beranda-list">
                   <h1 class="text-center mt-3 pt-5" style="font-size: 200%">Selamat Datang di bagian BACK END</h1>
@@ -36,7 +36,7 @@
                         <h1 style="font-family: BebasNeueRegular; font-size:28px; font-weight:bold; text-align:center;">{{$a->judul}}</h1>
                         <h1 style=" font-size:10px;">postedby: {{$a->postedby}}</h1>
                         <h1 style=" font-size:10px;">dibuat: {{$a->created_at}}</h1>
-                        <h1 style=" font-size:10px; margin-bottom:-15px;">diupdate: {{$a->cupdated_at}}</h1>
+                        <h1 style=" font-size:10px; margin-bottom:-15px;">diupdate: {{$a->updated_at}}</h1>
 
                         <br>
                         <img src="/img/gambar_bacaan/{{$a->gambar}}" alt="error" id="gambartabbaru" style="height: 125px;display: block; margin-left: auto; margin-right: auto;">

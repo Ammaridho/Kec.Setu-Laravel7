@@ -18,13 +18,8 @@
         
         @csrf
 
-        <div class="form-group mb-4">
-            <label for="exampleFormControlInput1">Pihak penginput</label>
-              @error('postedby')
-                  <div class="alert alert-danger">{{ $message }}</div>
-              @enderror 
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="postedby">
-        </div>
+        {{-- menggunakan blade agar bisa menaruh form di tempat lain dan dinamis --}}
+        <x-textfield field="postedby" label="Postedby" type="text" value=""/>
 
         <label>Perihal</label>
         @error('perihal')
@@ -44,30 +39,15 @@
                 <label class="form-check-label" for="inlineRadio3">Artikel</label>
             </div>
         </div>
-        
-        <div class="form-group mb-4">
-          <label for="exampleFormControlInput2">Judul</label>
-            @error('judul')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror 
-          <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="" name="judul">
-        </div>
+    
 
-        {{-- input gambar --}}
-        <div class="input-group mb-3">
-          <label for="gambar">Gambar</label>
-          <input class="form-control-file" type="file" name="gambar" id="gambar">
-       </div>
-        {{-- akhir input gambar --}}
+        <x-textfield field="judul" label="Judul" type="text" value=""/>
 
-        <div class="form-group mt-3">
-          <label for="exampleFormControlTextarea1">Isi</label>
-            @error('isi')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror 
-          <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" style="height: 240px;" name="isi"></textarea>
-            <center><label>Anda bisa melebarkannya dengan menarik pojok kanan bawah pada kolom isi</label></center>
-        </div>
+        <x-file field="gambar" label="Gambar" value=""/>
+
+        <x-textarea field="isi" label="Isi" value=""/>
+
+        <center><label>Anda bisa melebarkannya dengan menarik pojok kanan bawah pada kolom isi</label></center>
 
         <div class="div" style="float: right">
             <button class="btn btn-submit text-light bg-success float-right mt-4" type="submit" >Simpan</button>

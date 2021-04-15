@@ -47,7 +47,7 @@ Route::get('/kepwal','navigasiController@kepwal');
 Route::get('/beritakecamatan','navigasiController@beritakecamatan');
 
 //tag
-Route::get('/tags/{perihal}','navigasiController@tags');
+Route::get('tags/{perihal}','navigasiController@tags');
 
 
 //input pengaduan
@@ -70,6 +70,7 @@ Route::get('/bacaan/{id}','backendController@bacabacaan');
 
 //edit bacaan
 Route::get('/bacaan/{id}/edit','backendController@editbacaan');
+Route::put('/bacaan/{id}','backendController@editbacaanrestore');
 
 //hapus bacaan
 Route::delete('/backendindex/bacaan/{id}','backendController@destroybacaan');

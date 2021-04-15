@@ -32,7 +32,7 @@ class backendController extends Controller
         $validatedData = $request->validate([   
             'postedby' => 'required|max:20',
             'perihal' => 'required',
-            'judul' => 'required|max:60',
+            'judul' => 'required|max:100',
             'gambar' => 'required|mimes:jpeg,png,jpg|max:10000',
             'isi' => 'required'
         ]);
@@ -75,7 +75,38 @@ class backendController extends Controller
     public function editbacaan($id)
     {
         $bacaan = bacaan::find($id);
-        return view('konten.backendeditbacaan',compact('bacaan'));
+        return view('backend/backendeditbacaan',compact('bacaan'));
+    }
+
+    public function editbacaanrestore(Request $request, $id)
+    {
+        $validatedData = $request->validate([   
+            'postedby' => 'required|max:20',
+            'perihal' => 'required',
+            'judul' => 'required|max:100',
+            'gambar' => 'mimes:jpeg,png,jpg|max:10000',
+            'isi' => 'required'
+        ]);
+
+        
+        $bacaan = bacaan::find($id);
+        $bacaan->postedby = $request->postedby;
+        $bacaan->perihal = $request->perihal;
+        $bacaan->judul = $request->judul;
+
+        if ($request->gambar) {
+            $imgName = $request->gambar->getClientOriginalName() . '-' . time() . '.' . $request->gambar->extension();
+
+            $request->gambar->move(public_path('img/gambar_bacaan'), $imgName);
+
+            $bacaan->gambar = $imgName;
+        } 
+            
+
+        $bacaan->isi = $request->isi;
+        $bacaan->save();
+
+        return redirect('/backendindex');
     }
 
     public function bacapengaduan($id)

@@ -13,6 +13,8 @@
 
     <div class="bg-white rounded p-4" id="contentkiri">
 
+
+        {{-- {{dd($tags);}} --}}
         @foreach ($tags as $item)
 
             <div class="row">
