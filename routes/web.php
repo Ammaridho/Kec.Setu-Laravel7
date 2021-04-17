@@ -19,11 +19,14 @@ use Illuminate\Support\Facades\Route;
 
 //frontend ==================================================================================================
 
-//kosong hanya layouts
+//index
 Route::get('/','navigasiController@index');
 
 //home
 Route::get('/layouts','navigasiController@layouts');
+
+//searcing
+Route::get('/search','navigasiController@hasilsearch');
 
 //deskripsi
 Route::get('{id_deskripsi}/deskripsi','navigasiController@deskripsi');
@@ -49,6 +52,11 @@ Route::get('/beritakecamatan','navigasiController@beritakecamatan');
 //tag
 Route::get('tags/{perihal}','navigasiController@tags');
 
+//lihat gambargallery
+Route::get('/gambargallery','navigasiController@lihatgambargallery');
+
+//lihat videogallery
+Route::get('/videogallery','navigasiController@lihatvideogallery');
 
 //input pengaduan
 Route::get('/formpengaduan','navigasiController@formpengaduan'); //keform
@@ -63,7 +71,7 @@ Route::get('/backendindex','backendController@index');
 
 //inputbacaan
 Route::get('/backendinputbacaan','backendController@inputbacaan');
-Route::post('/backendindex','backendController@storebackendinputbacaan');
+Route::post('/backendinputbacaan/store','backendController@storebackendinputbacaan');
 
 //baca bacaan
 Route::get('/bacaan/{id}','backendController@bacabacaan');
@@ -80,3 +88,14 @@ Route::get('/pengaduan/{id}','backendController@bacapengaduan');
 
 //hapus pengaduan
 Route::delete('/backendindex/pengaduan/{id}','backendController@destroypengaduan');
+
+//input gambargallery
+Route::get('/gambargallery/input','backendController@inputgambargallery');
+Route::post('/gambargallery/input/store','backendController@storeinputgambargallery');
+
+//edit gambargallery
+Route::get('/gambargallery/{id}/edit','backendController@editgambargallery');
+Route::put('/gambargallery/input/store/{id}','backendController@storeeditgambargallery');
+
+//hapus gambargallery
+Route::delete('/gambargallery/delete/{id}','backendController@destroygambargallery');

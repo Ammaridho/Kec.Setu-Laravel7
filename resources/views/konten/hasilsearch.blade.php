@@ -3,17 +3,17 @@
 @section('content')
 
     <div class="row">
-        <div class="col-4 mt-2">
-            <h6 id="judulkonten" style="font-size: 22px">SEMUA BERITA</h6>
+        <div class="col-md-4 mt-2">
+            <h6 id="judulkonten" style="font-size: 22px">Search : {{$keyword}}</h6>
         </div>
-        <div class="col-8 mt-2" id="lokasipatern">
+        <div class="col-md-8 mt-2" id="lokasipatern">
             <div class="patern"></div>
         </div>
     </div>
 
-    <div class="bg-white rounded p-4" id="contentkiri">
+    <div class="bg-white rounded p-4 mt-3" id="contentkiri">
 
-        @foreach ($semuabacaan as $item)
+        @foreach ($hasilsearch as $item)
 
             <div class="row">
                 <div class="col-12">
@@ -42,11 +42,6 @@
             </div>
 
         @endforeach
-
-        <div>
-            {{-- link pindah halaman untuk melihat data selanjutnya  --}}
-            {{ $semuabacaan->links() }}
-        </div>
         
     </div>
 

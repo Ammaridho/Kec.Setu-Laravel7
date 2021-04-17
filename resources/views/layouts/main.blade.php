@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/main.css">
     
     <title>Kec. Setu- Kota Tangerang Selatan</title>
+    <link rel="icon" type="image/png" src="/img/icon/lambang.png">
 
   </head>
   <body>
@@ -22,14 +23,12 @@
             <!-- layer 1 -->
             <div class="row bg-light" id="headerlayer1">
 
-                <div class="col-sm-3" id="divtanggalheader">
-                    {{-- {{'locale' => 'id'}} --}}
-
+                <div class="col-3" id="divtanggalheader">
                     <input type="text" name="search" value="{{Carbon\Carbon::now()->format('d  M  Y')}}" id="tanggalheader" disabled>
                 </div>
 
-                <div class="col-sm-9" id="divsearchtextinput">
-                    <form class="formSearch" id="searchForm" action="" method="get">
+                <div class="col-9" id="divsearchtextinput">
+                    <form class="formSearch" id="searchForm" action="/search" method="get">
                         <input type="text" name="search" placeholder="Pencarian Berita" id="searchtextinput">
                         <button type="submit" id="submitSearch">C</button>
                     </form>
@@ -118,8 +117,8 @@
                                 Gallery
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Album Foto</a>
-                                <a class="dropdown-item" href="#">Album Video</a>
+                                <a class="dropdown-item" href="/gambargallery">Album Foto</a>
+                                <a class="dropdown-item" href="/videogallery">Album Video</a>
                             </div>
                         </li>
                         <li class="nav-item active">
@@ -197,7 +196,7 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active pt-3 pb-3" id="baru" role="tabpanel" aria-labelledby="baru-tab">
+                            <div class="tab-pane fade show active pt-3" id="baru" role="tabpanel" aria-labelledby="baru-tab">
                                 
                                 @foreach ($bacaan as $key => $item)
 
@@ -217,8 +216,10 @@
 
                                 @endforeach
 
+                                <a href="/beritakecamatan"><p style="font-size:12px; margin-top:-12px; color:#B3B3B3;">Tampilkan semua >></p></a>
+
                             </div>
-                            <div class="tab-pane fade pt-3 pb-3" id="tags" role="tabpanel" aria-labelledby="tags-tab">
+                            <div class="tab-pane fade pt-3" id="tags" role="tabpanel" aria-labelledby="tags-tab">
                                 <a href="../tags/{{'berita'}}"><button id="btntag">Berita</button></a>
                                 <a href="../tags/{{'kegiatan'}}"><button id="btntag">Kegiatan</button></a>
                                 <a href="../tags/{{'artikel'}}"><button id="btntag">Artikel</button></a>
@@ -235,19 +236,22 @@
                         </div>
                     </div>
 
+                    
                     <div class="bg-white rounded mb-4 p-2 text-center" id="contentkanan">
-                        <iframe class="embed-responsive-item" style="width: 100%;" src="https://www.youtube.com/embed/QeqbrVFOO74" frameborder="0" allowfullscreen></iframe>
-                        <iframe class="embed-responsive-item" style="width: 100%;" src="https://www.youtube.com/embed/UgX2Kjn8yo4" frameborder="0" allowfullscreen></iframe>
+                        @foreach ($videogallery as $item)
+                            <iframe class="embed-responsive-item mb-1" style="width: 100%;" src="{{$item->video}}" frameborder="0" allowfullscreen></iframe>
+                        @endforeach
                     </div>     
+                    
 
                     <div class="rounded mb-4" id="gambarkanan">
                         <img id="myImg" src="/img/gambar.PNG" alt="Pengaduan Tangsel" style="width:100%; height:100%;">
 
                         <!-- The Modal -->
                         <div id="myModal" class="modal">
-                        <span class="close">&times;</span>
-                        <img class="modal-content" id="img01">
-                        <div id="caption"></div>
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
                         </div>
                     </div>
 

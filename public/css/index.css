@@ -9,10 +9,10 @@
 }
 
 #judulberitajumbotron{
-    font-size: 17px;
-    background-color: aliceblue;
+    font-size: 1px;
+    background-color: rgba(240, 248, 255, 0.705);
     color: black;
-    margin-top: 210px;
+    margin-bottom: 30px;
     margin-left: -60px;
     padding: 5px;
     width: fit-content;
@@ -28,18 +28,18 @@
 
 #judulgambarberitaindex{
     font-size: 19px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     margin-top: 8px;
 }
 
 #tanggalgambarberitaindex{
     font-size: 11px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     color: #AAAAAA;
 }
 
 #tulisannormal{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-size: 12px;
 }
 
@@ -47,46 +47,51 @@
     margin-top: -20px;
 }
 
-/* Slide View Jumbotron ========================================================================== */
-body {font-family: Arial, Helvetica, sans-serif;}
-        
-#myImg {
+/* Slide View Jumbotron =================== */
+/* #myImg {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+} */
+
+#myImgindex{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
+/* #myImg:hover {opacity: 0.7;} */
+#myImgindex:hover {opacity: 0.7;}
 
 /* The Modal (background) */
-.modal {
+.modalindex {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 160px; /* Location of the box */
+  z-index: 99999999999; /* Sit on top */
+  padding-top: 170px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  /* height: 100%; Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modalindex-content {
   margin: auto;
   display: block;
   width: 30%;
-  max-width: 700px;
+  max-width: 400px;
 }
 
 /* Caption of Modal Image */
-#caption {
+#captionindex {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 400px;
   text-align: center;
   color: #ccc;
   padding: 10px 0;
@@ -94,7 +99,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modalindex-content, #captionindex {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -112,9 +117,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* The Close Button */
-.close {
+.closeindex {
   position: absolute;
-  top: 120px;
+  top: 150px;
   right: 32%;
   color: #f1f1f1;
   font-size: 40px;
@@ -122,8 +127,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.closeindex:hover,
+.closeindex:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -131,16 +136,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-  .modal-content {
+  .modalindex-content {
     width: 50%;
   }
-  .close{
+  .closeindex{
     right: 20%;
   }
 }
 
 
-/* Akhir Slide View Jumbotron =================================================================================== */
+/* Akhir Slide View Jumbotron ============= */
 
 /* Respondsive ===================================================================================== */
 @media (max-width: 766px) {

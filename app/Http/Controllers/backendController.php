@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\models\pengaduan;
 use App\models\bacaan;
-use App\models\gambar_bacaan;
+use App\models\gambargallery;
 use Illuminate\Http\Request;
 
 class backendController extends Controller
@@ -14,9 +14,10 @@ class backendController extends Controller
         // $bacaan = bacaan::with('gambar_bacaan')->orderBy('id', 'desc')->paginate();
         $bacaan = bacaan::orderBy('id', 'desc')->paginate();
         $pengaduan = pengaduan::orderBy('id', 'desc')->paginate();
+        $gambargallery = gambargallery::orderBy('id', 'desc')->paginate();
         // $gambar_bacaan = gambar_bacaan::orderBy('id', 'desc')->paginate();
 
-        return view('backend/backendindex', compact('bacaan','pengaduan'));
+        return view('backend/backendindex', compact('bacaan','pengaduan','gambargallery'));
     }
 
     public function inputbacaan()
@@ -30,7 +31,7 @@ class backendController extends Controller
         // dd($request->gambar);
 
         $validatedData = $request->validate([   
-            'postedby' => 'required|max:20',
+            'postedby' => 'required|max:50',
             'perihal' => 'required',
             'judul' => 'required|max:100',
             'gambar' => 'required|mimes:jpeg,png,jpg|max:10000',
@@ -81,7 +82,7 @@ class backendController extends Controller
     public function editbacaanrestore(Request $request, $id)
     {
         $validatedData = $request->validate([   
-            'postedby' => 'required|max:20',
+            'postedby' => 'required|max:50',
             'perihal' => 'required',
             'judul' => 'required|max:100',
             'gambar' => 'mimes:jpeg,png,jpg|max:10000',
@@ -125,6 +126,74 @@ class backendController extends Controller
     public function destroypengaduan($id)
     {
         pengaduan::find($id)->delete();
+
+        return redirect('/backendindex');
+    }
+
+    public function inputgambargallery()
+    {
+        $gambargallery = null;
+        return view('backend.backendinputgambar',compact('gambargallery'));
+    }
+
+    public function storeinputgambargallery(Request $request)
+    {
+        // dd($request);
+
+        $validatedData = $request->validate([   
+            'postedby' => 'required|max:50',
+            'nama' => 'required|max:100',
+            'gambar' => 'required|mimes:jpeg,png,jpg|max:10000'
+        ]);
+
+         $imgName = $request->gambar->getClientOriginalName() . '-' . time() . '.' . $request->gambar->extension();
+
+         $request->gambar->move(public_path('img/gambargallery'), $imgName);
+
+        $gambargallery = new gambargallery;    
+        $gambargallery->postedby = $request->postedby;
+        $gambargallery->gambar = $imgName;
+        $gambargallery->nama = $request->nama;
+        $gambargallery->save();
+
+
+        return redirect('/backendindex');
+    }
+
+    public function editgambargallery($id)
+    {
+        $gambargallery = gambargallery::find($id);
+        return view('backend.backendinputgambar',compact('gambargallery'));
+    }
+
+    public function storeeditgambargallery(Request $request, $id)
+    {
+        $validatedData = $request->validate([   
+            'postedby' => 'required|max:50',
+            'nama' => 'required|max:100',
+            'gambar' => 'mimes:jpeg,png,jpg|max:10000'
+        ]);
+
+
+        $gambargallery = gambargallery::find($id);    
+        $gambargallery->postedby = $request->postedby;
+        if ($request->gambar) {
+            $imgName = $request->gambar->getClientOriginalName() . '-' . time() . '.' . $request->gambar->extension();
+
+            $request->gambar->move(public_path('img/gambar_bacaan'), $imgName);
+
+            $bacaan->gambar = $imgName;
+        } 
+        $gambargallery->nama = $request->nama;
+        $gambargallery->save();
+
+
+        return redirect('/backendindex');
+    }
+
+    public function destroygambargallery($id)
+    {
+        gambargallery::find($id)->delete();
 
         return redirect('/backendindex');
     }

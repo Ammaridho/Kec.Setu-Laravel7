@@ -14,7 +14,7 @@
     </div>
     @endif
     
-    <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="../backendindex" method="POST" enctype="multipart/form-data">
+    <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="../backendinputbacaan/store" method="POST" enctype="multipart/form-data">
         
         @csrf
 

@@ -8,6 +8,8 @@ use App\models\kepwal;
 use App\models\bacaan;
 use App\models\kelurahan;
 use App\models\gambar_bacaan;
+use App\models\gambargallery;
+use App\models\videogallery;
 use App\models\deskripsi;
 use App\models\pengaduan;
 use Illuminate\Http\Request;
@@ -21,7 +23,10 @@ class navigasiController extends Controller
         $berita = bacaan::where('perihal','berita')->orderBy('id', 'desc')->paginate(3);
         $kegiatan = bacaan::where('perihal','kegiatan')->orderBy('id', 'desc')->paginate(3);
         $artikel = bacaan::where('perihal','artikel')->orderBy('id', 'desc')->paginate(3);
-        // dd($berita);
+        $gambargallery = gambargallery::all();
+        $videogallery = videogallery::all();
+        // dd($gambargallery);
+
         // $gambar_bacaan = gambar_bacaan::all();
 
         //untuk jumbotron
@@ -32,34 +37,47 @@ class navigasiController extends Controller
         // $gambar_terbaru = gambar_bacaan::orderBy('id', 'desc')->paginate(3);
         // $bacaan_terbaru = bacaan::orderBy('id', 'desc')->paginate(3);
 
-        return view('konten/index',compact('bacaan','berita','kegiatan','artikel'));
+        return view('konten/index',compact('bacaan','berita','kegiatan','artikel','gambargallery','videogallery'));
+    }
+
+    public function hasilsearch(Request $request)
+    {
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $videogallery = videogallery::all();
+        
+        $keyword = $request->search;
+        // dd($keyword);
+        $hasilsearch = bacaan::where("judul","LIKE","%$keyword%")->get();
+
+        return view('konten.hasilsearch',compact('bacaan','videogallery','hasilsearch','keyword'));
     }
 
     public function deskripsi($id_deskripsi){
         $deskripsi = deskripsi::find($id_deskripsi); //isi dari tulisan biasa
-        
+        $videogallery = videogallery::all();
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
         // $gambar_bacaan = gambar_bacaan::all();
         
-        return view('konten.deskripsi',compact('deskripsi','bacaan'));
+        return view('konten.deskripsi',compact('deskripsi','bacaan','videogallery'));
     }
 
     public function isibacaan($id){
         $bacaandetail = bacaan::find($id);     
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $videogallery = videogallery::all();
         // $gambar_bacaan = gambar_bacaan::find($id);
         // dd($bacaan);
-        return view('konten.bacaan',compact('bacaandetail','bacaan'));
+        return view('konten.bacaan',compact('bacaandetail','bacaan','videogallery'));
     }
 
     public function profilkelurahan($nama)
     {
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
         // $gambar_bacaan = gambar_bacaan::all();
-
+        $videogallery = videogallery::all();
         $kelurahan = kelurahan::where('nama' , $nama)->first();
         // dd($kelurahan);
-        return view('konten.profilkelurahan',compact('kelurahan','bacaan'));
+        return view('konten.profilkelurahan',compact('kelurahan','bacaan','videogallery'));
     }
 
     public function perda()
@@ -68,22 +86,23 @@ class navigasiController extends Controller
         // $gambar_bacaan = gambar_bacaan::all();
 
         $peraturan = perda::all();
+        $videogallery = videogallery::all();
 
         $namaaturan = "Peraturan Daerah";
 
-        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan'));
+        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan','videogallery'));
     }
 
     public function perwal()
     {
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
         // $gambar_bacaan = gambar_bacaan::all();
-
+        $videogallery = videogallery::all();
         $peraturan = perwal::all();
 
         $namaaturan = "Peraturan Walikota";
 
-        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan'));
+        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan','videogallery'));
     }
 
     public function kepwal()
@@ -94,33 +113,44 @@ class navigasiController extends Controller
         $peraturan = kepwal::all();
 
         $namaaturan = "Keputusan Walikota";
+        $videogallery = videogallery::all();
 
-        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan'));
+        return view('konten.produkhukum',compact('namaaturan','peraturan','bacaan','videogallery'));
     }
 
     public function beritakecamatan()
     {
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);    
-        $semuabacaan = bacaan::orderBy('id', 'desc')->paginate();
+        $semuabacaan = bacaan::orderBy('id', 'desc')->paginate(7);
+        $videogallery = videogallery::all();
         // $gambar_bacaan = gambar_bacaan::all();
 
-        return view('konten.beritakecamatan',compact('bacaan','semuabacaan'));
+        return view('konten.beritakecamatan',compact('bacaan','semuabacaan','videogallery'));
     }
 
-    public function tags($perihal)
+    public function lihatgambargallery()
     {
+        $gambargallery = gambargallery::all();
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
-        $tags = bacaan::where('perihal',$perihal)->orderBy('id', 'desc')->paginate();
-        // dd($bacaan);
-        return view('konten.tags',compact('bacaan','tags'));
+        $videogallery = videogallery::all();
+        return view('konten.gambargallery',compact('gambargallery','bacaan','videogallery'));
     }
+
+    public function lihatvideogallery()
+    {
+        $videogallery = videogallery::all();
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        return view('konten.videogallery',compact('videogallery','bacaan'));
+    }
+
 
     public function formpengaduan()
     {
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $videogallery = videogallery::all();
         // $gambar_bacaan = gambar_bacaan::all();
 
-        return view('konten/formpengaduan',compact('bacaan'));
+        return view('konten/formpengaduan',compact('bacaan','videogallery'));
     }
 
     public function storeformpengaduan(Request $request)
@@ -147,4 +177,12 @@ class navigasiController extends Controller
         return redirect('/');
     }
 
+    public function tags($perihal)
+    {
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $videogallery = videogallery::all();
+        $tags = bacaan::where('perihal',$perihal)->orderBy('id', 'desc')->paginate(7);
+        // dd($bacaan);
+        return view('konten.tags',compact('bacaan','tags','videogallery'));
+    }
 }

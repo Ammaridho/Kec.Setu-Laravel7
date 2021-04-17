@@ -12,9 +12,17 @@
             </div>
         </div>
 
+        @if (($bacaandetail->updated_at) != null)
+            <?php $tanggal = $bacaandetail->updated_at?>
+        @elseif (($bacaandetail->created_at) != null)
+            <?php $tanggal = $bacaandetail->created_at?>
+        @else
+            <?php $tanggal = 'Belum ada tanggal' ?>
+        @endif
+
         <div class="row">
             <div class="col-12">
-                <p style="font-size:11px; font-family: Arial; color:#aaaaaa;">Posted by: {{$bacaandetail->postedby}} , 05 Agustus 2020, 11:42:02 , <span style="font-size:11px; font-family: Arial; font-weight:bold; color:red;"> Telah Di Lihat Sebanyak: 105</span></p>
+                <p style="font-size:11px; font-family: Arial; color:#aaaaaa;">Posted by: {{$bacaandetail->postedby}} , {{$tanggal}} , <span style="font-size:11px; font-family: Arial; font-weight:bold; color:red;"> Telah Di Lihat Sebanyak: 105</span></p>
             </div>
         </div>
 
