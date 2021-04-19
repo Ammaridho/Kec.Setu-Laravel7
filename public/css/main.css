@@ -7,6 +7,10 @@ body{
     font-family: Arial;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 #containerUtama{
     margin-top: 5px;
     /* left: 50%; */
@@ -59,7 +63,7 @@ margin-top: -3px;
     border-bottom: 0px;
     border-right: 0px;
     border-left: 0px;
-    width:25px;
+    width:30px;
     height: 32px;
     margin-right: -15px;
     background-color: rgb(23,165,137);
@@ -125,12 +129,12 @@ margin-top: -3px;
 }
 
 .dropdown-menu{
-    border-top: 1px solid rgb(23,165,137);
+    border-top: 3px solid rgb(23,165,137);
     background-color: #2e2e2ef6;
 }
 
 #navbarNavDropdown{
-    border-top: 0.1px solid rgba(0, 0, 0, 0.192);
+    /* border-top: 0.1px solid rgba(0, 0, 0, 0.192); */
     text-align: left;
     background-color: #2e2e2ef6;
 }
@@ -331,6 +335,7 @@ margin-top: -3px;
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
+  margin-top: -70px;
   display: block;
   width: 30%;
   max-width: 400px;
@@ -369,7 +374,7 @@ margin-top: -3px;
 /* The Close Button */
 .close {
   position: absolute;
-  top: 150px;
+  top: 50px;
   right: 32%;
   color: #f1f1f1;
   font-size: 40px;

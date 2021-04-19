@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-4 mt-2">
-            <h6 id="judulkonten" style="font-size: 22px">Search : {{$keyword}}</h6>
+            <h6 id="judulkonten" style="font-size: 22px">Cari : {{$keyword}}</h6>
         </div>
         <div class="col-md-8 mt-2" id="lokasipatern">
             <div class="patern"></div>

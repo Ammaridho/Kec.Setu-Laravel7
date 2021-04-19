@@ -9,17 +9,13 @@
     <div class="bg-white rounded mb-1" id="bacabacaan"> 
 
         <div class="row">
-            <div class="col-1">
-                {{-- button edit --}}
-                <a href="/pengaduan/{{$pengaduan->id}}/edit" class="btn btn-info btn-sm">Edit</a>
-            </div>
 
             <div class="col-11" >
                 {{-- button hapus --}}
-                <form action="/pengaduan/{{$pengaduan->id}}"  method="post" style="float: right">
+                <form action="/backendindex/pengaduan/{{$pengaduan->id}}"  method="post" style="float: right">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-sm btn-danger">Hapus</button>
+                    <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Hapus</button>
                 </form> 
             </div>
         </div>

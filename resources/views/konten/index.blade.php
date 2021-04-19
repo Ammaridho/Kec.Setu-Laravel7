@@ -4,6 +4,13 @@
 
 @section('content')
 
+{{-- @if ($message = Session::get('sukses'))
+<div class="alert alert-success alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+    <strong>{{ $message }}</strong>
+</div>
+@endif --}}
+
     <div class="row mb-4">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -15,17 +22,17 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <img src="/img/gambar_bacaan/{{$bacaan[0]->gambar}}" class="d-block w-100" alt="..." style="height: 360px">
+                    <a href="../{{$bacaan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[0]->gambar}}" class="d-block w-100" alt="..." style="height: 360px"></a>
                     <div class="carousel-caption d-none d-md-block rounded" id="judulberitajumbotron">
-                        <h6>{{$bacaan[0]->judul}}</h6>
+                        <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan" style="text-decoration: none;"><h6>{{$bacaan[0]->judul}}</h6></a>
                     </div>
                 </div>
 
                 @for ($i = 1; $i < count($bacaan); $i++)
                 <div class="carousel-item">
-                    <img src="/img/gambar_bacaan/{{$bacaan[$i]->gambar}}" class="d-block w-100" alt="..." style="height: 360px">
+                    <a class="text-dark" href="../{{$bacaan[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[$i]->gambar}}" class="d-block w-100" alt="..." style="height: 360px"></a>
                     <div class="carousel-caption d-none d-md-block rounded" id="judulberitajumbotron">
-                        <h6>{{$bacaan[$i]->judul}}</h6>
+                        <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan"><h6>{{$bacaan[$i]->judul}}</h6></a>
                     </div>
                 </div>
                 @endfor
@@ -60,8 +67,8 @@
                 
                     <div class="col-sm-6" style="padding:10px;">
                         <div style="margin-left:20px">
-                        <img src="/img/gambar_bacaan/{{$berita[0]->gambar}}" alt="error" id="gambarberitaindex" style="width: 90%;">
-                        <h5 id="judulgambarberitaindex">{{$berita[0]->judul}}</h5>
+                            <a href="../{{$berita[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$berita[0]->gambar}}" alt="error" id="gambarberitaindex" style="width: 90%;"></a>
+                            <a class="text-dark" href="../{{$berita[0]->id}}/isibacaan"><h5 id="judulgambarberitaindex">{{$berita[0]->judul}}</h5></a>
                        
                         @if (($berita[0]->updated_at) != null)
                             <?php $tanggal = $berita[0]->updated_at?>
@@ -73,7 +80,7 @@
                             
                         <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
                         <p id="tulisannormal">{{substr($berita[0]->isi,0,45)}}..</p>
-                        <div class="readmore"><a href="" id="tulisannormal" style="color: black">Read More >></a></div>
+                        <div class="readmore"><a href="../{{$berita[0]->id}}/isibacaan" id="tulisannormal" style="color: black">Read More >></a></div>
                         </div>
                     </div>
                     
@@ -85,7 +92,7 @@
                             <div class="row pt-2 " style="box-shadow: rgb(181, 181, 181) 0px 0px 4px 0px; background-color:#F7F7F7; width:99.5%; margin-left:1px;">
 
                                 <div class="col-4">
-                                    <img src="/img/gambar_bacaan/{{$berita[$i]->gambar}}" alt="error" id="gambarberitaindex">
+                                    <a class="text-dark" href="../{{$berita[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$berita[$i]->gambar}}" alt="error" id="gambarberitaindex"></a>
                                     
                                     @if (($berita[$i]->updated_at) != null)
                                         <?php $tanggal = $berita[$i]->updated_at?>
@@ -94,11 +101,11 @@
                                     @else
                                         <?php $tanggal = 'Belum ada tanggal' ?>
                                     @endif
-                                    <p class="text-center" style="font-size:11px; color:#B3B3B3;">{{$tanggal}}</p>
+                                    <a class="text-dark" href="../{{$berita[$i]->id}}/isibacaan"><p class="text-center" style="font-size:11px; color:#B3B3B3;">{{$tanggal}}</p></a>
                                 </div>
                                 
                                 <div class="col-8 pt-1">
-                                    <p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$berita[$i]->judul}}</p>
+                                    <a class="text-dark" href="../{{$berita[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$berita[$i]->judul}}</p></a>
                                 </div>
                                 
                             </div>
@@ -125,8 +132,8 @@
             <div class="bg-white rounded" id="contentkiri" style="padding:15px; padding-bottom:-10px;">
                     
         
-                <img src="/img/gambar_bacaan/{{$kegiatan[0]->gambar}}" alt="error" id="gambarberitaindex">
-                <h5 id="judulgambarberitaindex">{{$kegiatan[0]->judul}}</h5>
+                <a href="../{{$kegiatan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$kegiatan[0]->gambar}}" alt="error" id="gambarberitaindex"></a>
+                <a class="text-dark" href="../{{$kegiatan[0]->id}}/isibacaan"><h5 id="judulgambarberitaindex">{{$kegiatan[0]->judul}}</h5></a>
 
                 @if (($kegiatan[0]->updated_at) != null)
                     <?php $tanggal = $kegiatan[0]->updated_at?>
@@ -137,15 +144,16 @@
                 @endif
                 <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
                 <p id="tulisannormal">{{substr($kegiatan[0]->isi,0,45)}}</p>
-                <div class="readmore mb-3"><a href="" id="tulisannormal" style="color: black;">Read More >></a></div>
+                <div class="readmore mb-3"><a href="../{{$kegiatan[0]->id}}/isibacaan" id="tulisannormal" style="color: black;">Read More >></a></div>
      
 
-                <div class="row pt-2" style="background-color:#F7F7F7; box-shadow: 0 0 5px #cacaca;">
+                @for ($i = 1; $i < count($kegiatan); $i++)
+                
+                   <div class="row pt-2" style="background-color:#F7F7F7; box-shadow: 0 0 5px #cacaca;">
 
-                    @for ($i = 1; $i < count($kegiatan); $i++)
                         
                         <div class="col-4">
-                            <img src="/img/gambar_bacaan/{{$kegiatan[$i]->gambar}}" alt="error" id="gambarberitaindex">
+                            <a class="text-dark" href="../{{$kegiatan[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$kegiatan[$i]->gambar}}" alt="error" id="gambarberitaindex"></a>
                             
                             @if (($kegiatan[$i]->updated_at) != null)
                                 <?php $tanggal = $kegiatan[$i]->updated_at?>
@@ -158,13 +166,14 @@
                         </div>
                         
                         <div class="col-8 pt-1">
-                            <p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$kegiatan[$i]->judul}}</p>
+                            <a class="text-dark" href="../{{$kegiatan[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$kegiatan[$i]->judul}}</p></a>
                         </div>
 
-                    @endfor
-
-                </div>
+                    
+                    </div>
                 
+                @endfor
+
             </div>
             
         </div>
@@ -179,8 +188,8 @@
                 </div>
             </div>
             <div class="bg-white rounded" id="contentkiri" style="padding:15px; padding-bottom:-10px;">
-                <img src="/img/gambar_bacaan/{{$artikel[0]->gambar}}" alt="error" id="gambarberitaindex" >
-                <h5 id="judulgambarberitaindex">{{$artikel[0]->judul}}</h5>
+                <a class="text-dark" href="../{{$artikel[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$artikel[0]->gambar}}" alt="error" id="gambarberitaindex"></a>
+                <a class="text-dark" href="../{{$artikel[0]->id}}/isibacaan"><h5 id="judulgambarberitaindex">{{$artikel[0]->judul}}</h5></a>
                 
                 @if (($artikel[0]->updated_at) != null)
                     <?php $tanggal = $artikel[0]->updated_at?>
@@ -191,20 +200,19 @@
                 @endif
                 <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
                 <p id="tulisannormal">{{substr($artikel[0]->isi,0,45)}}</p>
-                <div class="readmore"><a href="" id="tulisannormal" style="color: black">Read More >></a></div>
+                <div class="readmore"><a href="../{{$artikel[0]->id}}/isibacaan" id="tulisannormal" style="color: black">Read More >></a></div>
 
-                <div class="row pt-2 mt-2" style="background-color:#F7F7F7; box-shadow: 0 0 5px #cacaca;">
+                @for ($i = 1; $i < count($artikel); $i++)
 
-                    @foreach ($artikel as $item)
-                    
+                    <div class="row pt-2 mt-2" style="background-color:#F7F7F7; box-shadow: 0 0 5px #cacaca;">
+                        
                         <div class="col-4">
-                            {{-- @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars) --}}
-                                <img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambarberitaindex">
-                            {{-- @endforeach --}}
-                            @if (($item->updated_at) != null)
-                                <?php $tanggal = $item->updated_at?>
-                            @elseif (($item->created_at) != null)
-                                <?php $tanggal = $item->created_at?>
+                            <a class="text-dark" href="../{{$artikel[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$artikel[$i]->gambar}}" alt="error" id="gambarberitaindex"></a>
+                            
+                            @if (($artikel[$i]->updated_at) != null)
+                                <?php $tanggal = $artikel[$i]->updated_at?>
+                            @elseif (($artikel[$i]->created_at) != null)
+                                <?php $tanggal = $artikel[$i]->created_at?>
                             @else
                                 <?php $tanggal = 'Belum ada tanggal' ?>
                             @endif
@@ -212,12 +220,13 @@
                         </div>
                         
                         <div class="col-8 pt-1">
-                            <p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$item->judul}}</p>
+                            <a class="text-dark" href="../{{$artikel[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$kegiatan[$i]->judul}}</p></a>
                         </div>
 
-                    @endforeach
+                    </div>
 
-                </div>
+                @endfor
+                
             </div>
         </div>
     </div>
@@ -235,7 +244,7 @@
             <div class="bg-white rounded" id="contentkiri" style="padding: 15px;">
                 @foreach ($gambargallery as $item)
 
-                    <img id="myImg" src="/img/gambargallery/{{$item->gambar}}" alt="{{$item->nama}}" style="width:130px;">
+                    <img src="/img/gambargallery/{{$item->gambar}}" alt="{{$item->nama}}" style="width:100px; height: 70px;">
 
                         {{-- kalau ini di commend di main bisa jalan --}}
                         {{-- <div id="myModal" class="modal">

@@ -19,7 +19,7 @@
                 <form action="/artikel/{{$bacaan->id}}"  method="post" style="float: right">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-sm btn-danger">Hapus</button>
+                    <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Hapus</button>
                 </form> 
             </div>
         </div>

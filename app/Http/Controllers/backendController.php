@@ -20,6 +20,35 @@ class backendController extends Controller
         return view('backend/backendindex', compact('bacaan','pengaduan','gambargallery'));
     }
 
+    public function hasilbackendsearchberita(Request $request)
+    {
+        $keyword = $request->search;
+        // dd($request->search);
+        
+        $hasilsearch = bacaan::where("judul","LIKE","%$keyword%")->orderBy('id', 'desc')->get();
+
+        return view('backend.hasilsearchberita',compact('hasilsearch','keyword'));
+    }
+
+    public function hasilbackendsearchpengaduan(Request $request)
+    {
+        $keyword = $request->search;
+        
+        $hasilsearch = pengaduan::where("perihal","LIKE","%$keyword%")->orderBy('id', 'desc')->get();
+
+        return view('backend.hasilsearchpengaduan',compact('hasilsearch','keyword'));
+    }
+
+    public function hasilbackendsearchgambargallery(Request $request)
+    {
+        
+        $keyword = $request->search;
+        
+        $hasilsearch = gambargallery::where("nama","LIKE","%$keyword%")->orderBy('id', 'desc')->get();
+
+        return view('backend.hasilsearchgambargallery',compact('hasilsearch','keyword'));
+    }
+
     public function inputbacaan()
     {
         return view('backend/backendinputbacaan');
@@ -64,7 +93,7 @@ class backendController extends Controller
         // $gambar_bacaan->save();
 
 
-        return redirect('/backendindex');
+        return redirect('/backendindex')->with('message','Berhasil Menginput Bacaan');
     }
 
     public function bacabacaan($id)
@@ -107,7 +136,7 @@ class backendController extends Controller
         $bacaan->isi = $request->isi;
         $bacaan->save();
 
-        return redirect('/backendindex');
+        return redirect('/backendindex')->with('message','Berhasil Mengedit Bacaan');
     }
 
     public function bacapengaduan($id)
@@ -120,14 +149,14 @@ class backendController extends Controller
     {
         bacaan::find($id)->delete();
 
-        return redirect('/backendindex');
+        return redirect('/backendindex')->with('message','Berhasil menghapus Bacaan');
     }
 
     public function destroypengaduan($id)
     {
         pengaduan::find($id)->delete();
 
-        return redirect('/backendindex');
+        return redirect('/backendindex')->with('message','Berhasil Menghapus Pengaduan');
     }
 
     public function inputgambargallery()
@@ -157,7 +186,7 @@ class backendController extends Controller
         $gambargallery->save();
 
 
-        return redirect('/backendindex');
+        return redirect('/backendindex')->with('message','Berhasil Menginput Gambar');
     }
 
     public function editgambargallery($id)
@@ -188,13 +217,13 @@ class backendController extends Controller
         $gambargallery->save();
 
 
-        return redirect('/backendindex');
+        return redirect('../backendindex')->with('message','Berhasil Mengedit Gambar');
     }
 
     public function destroygambargallery($id)
     {
         gambargallery::find($id)->delete();
 
-        return redirect('/backendindex');
+        return redirect('/backendindex')->with('message','Berhasil Menghapus Gambar');
     }
 }

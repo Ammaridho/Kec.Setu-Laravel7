@@ -19,7 +19,7 @@ class navigasiController extends Controller
     public function index(){
 
         // $bacaan = bacaan::with('gambar_bacaan')->orderBy('id', 'desc')->paginate();
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         $berita = bacaan::where('perihal','berita')->orderBy('id', 'desc')->paginate(3);
         $kegiatan = bacaan::where('perihal','kegiatan')->orderBy('id', 'desc')->paginate(3);
         $artikel = bacaan::where('perihal','artikel')->orderBy('id', 'desc')->paginate(3);
@@ -42,12 +42,12 @@ class navigasiController extends Controller
 
     public function hasilsearch(Request $request)
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         $videogallery = videogallery::all();
         
         $keyword = $request->search;
         // dd($keyword);
-        $hasilsearch = bacaan::where("judul","LIKE","%$keyword%")->get();
+        $hasilsearch = bacaan::where("judul","LIKE","%$keyword%")->orderBy('id', 'desc')->get();
 
         return view('konten.hasilsearch',compact('bacaan','videogallery','hasilsearch','keyword'));
     }
@@ -55,15 +55,18 @@ class navigasiController extends Controller
     public function deskripsi($id_deskripsi){
         $deskripsi = deskripsi::find($id_deskripsi); //isi dari tulisan biasa
         $videogallery = videogallery::all();
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         // $gambar_bacaan = gambar_bacaan::all();
         
         return view('konten.deskripsi',compact('deskripsi','bacaan','videogallery'));
     }
 
-    public function isibacaan($id){
-        $bacaandetail = bacaan::find($id);     
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+    public function isibacaan($id, Request $request){
+        $bacaandetail = bacaan::find($id); 
+        $ip  = $request->ip(); //panggil ip
+        dd($ip);
+        
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         $videogallery = videogallery::all();
         // $gambar_bacaan = gambar_bacaan::find($id);
         // dd($bacaan);
@@ -72,7 +75,7 @@ class navigasiController extends Controller
 
     public function profilkelurahan($nama)
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         // $gambar_bacaan = gambar_bacaan::all();
         $videogallery = videogallery::all();
         $kelurahan = kelurahan::where('nama' , $nama)->first();
@@ -82,7 +85,7 @@ class navigasiController extends Controller
 
     public function perda()
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         // $gambar_bacaan = gambar_bacaan::all();
 
         $peraturan = perda::all();
@@ -95,7 +98,7 @@ class navigasiController extends Controller
 
     public function perwal()
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         // $gambar_bacaan = gambar_bacaan::all();
         $videogallery = videogallery::all();
         $peraturan = perwal::all();
@@ -107,7 +110,7 @@ class navigasiController extends Controller
 
     public function kepwal()
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         // $gambar_bacaan = gambar_bacaan::all();
 
         $peraturan = kepwal::all();
@@ -120,7 +123,7 @@ class navigasiController extends Controller
 
     public function beritakecamatan()
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);    
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);    
         $semuabacaan = bacaan::orderBy('id', 'desc')->paginate(7);
         $videogallery = videogallery::all();
         // $gambar_bacaan = gambar_bacaan::all();
@@ -131,7 +134,7 @@ class navigasiController extends Controller
     public function lihatgambargallery()
     {
         $gambargallery = gambargallery::all();
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         $videogallery = videogallery::all();
         return view('konten.gambargallery',compact('gambargallery','bacaan','videogallery'));
     }
@@ -139,14 +142,14 @@ class navigasiController extends Controller
     public function lihatvideogallery()
     {
         $videogallery = videogallery::all();
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         return view('konten.videogallery',compact('videogallery','bacaan'));
     }
 
 
     public function formpengaduan()
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         $videogallery = videogallery::all();
         // $gambar_bacaan = gambar_bacaan::all();
 
@@ -174,12 +177,14 @@ class navigasiController extends Controller
         $pengaduan->deskripsi = $request->deskripsi;
         $pengaduan->save();
 
-        return redirect('/');
+        // Session::flash('sukses','Berhasil Memberikan Pengaduan');
+
+        return redirect('/formpengaduan')->with('message','Berhasil Memberikan Pengaduan');
     }
 
     public function tags($perihal)
     {
-        $bacaan = bacaan::orderBy('id', 'desc')->paginate(3);
+        $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         $videogallery = videogallery::all();
         $tags = bacaan::where('perihal',$perihal)->orderBy('id', 'desc')->paginate(7);
         // dd($bacaan);

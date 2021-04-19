@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/main.css">
     
     <title>Kec. Setu- Kota Tangerang Selatan</title>
-    <link rel="icon" type="image/png" src="/img/icon/lambang.png">
+    <link rel="shortcut icon" type="image/jpg" href="img/icon/lambang.png"/>
 
   </head>
   <body>
@@ -30,7 +30,9 @@
                 <div class="col-9" id="divsearchtextinput">
                     <form class="formSearch" id="searchForm" action="/search" method="get">
                         <input type="text" name="search" placeholder="Pencarian Berita" id="searchtextinput">
-                        <button type="submit" id="submitSearch">C</button>
+                        <button type="submit" id="submitSearch"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-light" viewBox="0 -2 20 20">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
                     </form>
                 </div>
 
@@ -45,7 +47,9 @@
             <div class="row sticky-top" id="headerlayer3">
                 <nav class="navbar navbar-expand-xl navbar-dark" id="navbaratas">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbaratasCollapse">
-                    <span class="">Menu</span>
+                    <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 20 25">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                      </svg></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
@@ -128,7 +132,7 @@
                             <a class="nav-link" href="https://e-ppid.tangerangselatankota.go.id/" id="ygborder">Informasi Publik</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-warning font-weight-bold" href="../backendindex" id="ygborder">BACK END</a>
+                            <a class="nav-link text-warning font-weight-bold" href="../login" id="ygborder">BACK END</a>
                         </li>
                     </ul>
                     </div>
@@ -216,7 +220,7 @@
 
                                 @endforeach
 
-                                <a href="/beritakecamatan"><p style="font-size:12px; margin-top:-12px; color:#B3B3B3;">Tampilkan semua >></p></a>
+                                <a href="/beritakecamatan"><p style="font-size:12px; margin-top: 15px; color:#B3B3B3;">Tampilkan semua >></p></a>
 
                             </div>
                             <div class="tab-pane fade pt-3" id="tags" role="tabpanel" aria-labelledby="tags-tab">

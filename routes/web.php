@@ -63,39 +63,56 @@ Route::get('/formpengaduan','navigasiController@formpengaduan'); //keform
 Route::post('/','navigasiController@storeformpengaduan');  //proses input
 
 
+//otentikasi ===================================================================================================
+
+//login
+Route::get('/login','otentikasiController@login');
+Route::post('/login','otentikasiController@ceklogin');
+
 
 //backend ===================================================================================================
 
-//index
-Route::get('/backendindex','backendController@index');
+Route::group(['middleware' => 'ceksession'], function(){
 
-//inputbacaan
-Route::get('/backendinputbacaan','backendController@inputbacaan');
-Route::post('/backendinputbacaan/store','backendController@storebackendinputbacaan');
+    //index
+    Route::get('/backendindex','backendController@index')->name('backendindex');
 
-//baca bacaan
-Route::get('/bacaan/{id}','backendController@bacabacaan');
+    //searcing
+    Route::get('/backendsearch/berita','backendController@hasilbackendsearchberita');
+    Route::get('/backendsearch/pengaduan','backendController@hasilbackendsearchpengaduan');
+    Route::get('/backendsearch/gambar','backendController@hasilbackendsearchgambargallery');
 
-//edit bacaan
-Route::get('/bacaan/{id}/edit','backendController@editbacaan');
-Route::put('/bacaan/{id}','backendController@editbacaanrestore');
+    //inputbacaan
+    Route::get('/backendinputbacaan','backendController@inputbacaan');
+    Route::post('/backendinputbacaan/store','backendController@storebackendinputbacaan');
 
-//hapus bacaan
-Route::delete('/backendindex/bacaan/{id}','backendController@destroybacaan');
+    //baca bacaan
+    Route::get('/bacaan/{id}','backendController@bacabacaan');
 
-//baca pengaduan
-Route::get('/pengaduan/{id}','backendController@bacapengaduan');
+    //edit bacaan
+    Route::get('/bacaan/{id}/edit','backendController@editbacaan');
+    Route::put('/bacaan/{id}','backendController@editbacaanrestore');
 
-//hapus pengaduan
-Route::delete('/backendindex/pengaduan/{id}','backendController@destroypengaduan');
+    //hapus bacaan
+    Route::delete('/backendindex/bacaan/{id}','backendController@destroybacaan');
 
-//input gambargallery
-Route::get('/gambargallery/input','backendController@inputgambargallery');
-Route::post('/gambargallery/input/store','backendController@storeinputgambargallery');
+    //baca pengaduan
+    Route::get('/pengaduan/{id}','backendController@bacapengaduan');
 
-//edit gambargallery
-Route::get('/gambargallery/{id}/edit','backendController@editgambargallery');
-Route::put('/gambargallery/input/store/{id}','backendController@storeeditgambargallery');
+    //hapus pengaduan
+    Route::delete('/backendindex/pengaduan/{id}','backendController@destroypengaduan');
 
-//hapus gambargallery
-Route::delete('/gambargallery/delete/{id}','backendController@destroygambargallery');
+    //input gambargallery
+    Route::get('/gambargallery/input','backendController@inputgambargallery');
+    Route::post('/gambargallery/input/store','backendController@storeinputgambargallery');
+
+    //edit gambargallery
+    Route::get('/gambargallery/{id}/edit','backendController@editgambargallery');
+    Route::put('/gambargallery/input/store/{id}','backendController@storeeditgambargallery');
+
+    //hapus gambargallery
+    Route::delete('/gambargallery/delete/{id}','backendController@destroygambargallery');
+
+    //logout
+    Route::get('/logout','otentikasiController@logout')->name('logout');
+});
