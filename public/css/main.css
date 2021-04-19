@@ -18,7 +18,7 @@ body{
     display: inline-block;
     margin-left: -3px;
     font-size: 12px; 
-    margin-top: 7px;
+    line-height: 1px;
     color: rgb(23,165,137);
     letter-spacing: -1px;
     width: 80px;
@@ -36,7 +36,7 @@ margin-top: -2px;
 }
 
 #searchForm{
-    margin-top: 1px;
+    margin-top: 0px;
     float:right;
 }
 
@@ -45,7 +45,7 @@ margin-top: -2px;
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
-    height: 29px;
+    height: 31px;
     width: 120px;
     margin-top: 1px;
     margin-right: -5px;
@@ -86,7 +86,6 @@ margin-top: -2px;
     height: 53px;
     font-size: 12px;
     letter-spacing: 0.5px;
-    background-color: #2e2e2ef6;
 }
 
 
@@ -96,7 +95,6 @@ margin-top: -2px;
     line-height: 27px;
     padding-left: 5px;
     text-align: center;
-    /* background-color: #2e2e2ef6; */
 }
 
 #ygborder{
@@ -109,8 +107,8 @@ margin-top: -2px;
     width: 100%;
     height: 49px;
     z-index: 10000;
+    background-color: #2e2e2ef6;
 }
-
 
 #navbaratasCollapse{
     height: 25px;
@@ -129,8 +127,10 @@ margin-top: -2px;
 }
 
 #navbarNavDropdown{
+    background-color: #2e2e2ef6;
     border-top: 0.1px solid rgba(0, 0, 0, 0.192);
     text-align: left;
+
 }
 
 /* HeadLine News */
@@ -142,7 +142,7 @@ margin-top: -2px;
 
 #miniheader2{
     height: 29px; 
-    width: 935px;
+    width: 89%;
 }
 
 #hntext{
@@ -172,7 +172,7 @@ margin-top: -2px;
     margin-top: 6px;
     margin-left: -5px;
     box-shadow: 0 0 5px #cacaca;
-    height: auto;
+    height:fit-content;
     border-bottom: 5px solid rgb(23,165,137);
 }
 
@@ -186,7 +186,6 @@ margin-top: -2px;
     font-weight: bold;
     font-size: 28px;
 }
-
 
 
 #contentkanan{
@@ -203,34 +202,6 @@ margin-top: -2px;
     margin-bottom: 3px;
     font-family: "BebasNeueRegular";
 }
-
-#lokasipatern{
-    margin-bottom: -10px;
-    width: 100%;
-}
-
-.patern{
-    line-height: 30px;
-    width: 100%;
-    height: 22px;
-    margin-bottom: 3px;
-    margin-left: 0px;
-    background-color: #ffffff;
-    opacity: 0.2;
-    background: repeating-linear-gradient( 45deg, #000000, #000000 2px, #ffffff 2px, #ffffff 10px );
-}
-
-/* .paternkegiatan{
-    line-height: 30px;
-    width: 80%;
-    height: 22px;
-    margin-left: 45px;
-    margin-bottom: 3px;
-    background-color: #ffffff;
-    opacity: 0.2;
-    background: repeating-linear-gradient( 45deg, #000000, #000000 2px, #ffffff 2px, #ffffff 10px );
-} */
-
 
 #myTab{
     padding-top: 10px;
@@ -251,12 +222,11 @@ margin-top: -2px;
 
 .tabtab#contentkanan{
     height:fit-content;
-    padding: 10px;
 }
 
 #gambartabbaru{
+    margin-left: 20px;
     width: 100%;
-    padding: 2px 2px 2px 2px;
     box-shadow: rgb(181, 181, 181) 0px 0px 2px 0px;
 }
 
@@ -266,9 +236,9 @@ margin-top: -2px;
 }
 
 #gambarkanan{
-    height: fit-content;
+    background-image: url(/img/gambar.PNG);
     width: 100%;
-    height: 500px;
+    height: 438px;
     background-position: center;
     overflow:auto;
     background-size: cover;
@@ -323,20 +293,11 @@ margin-top: -2px;
     #containerUtama{
         width:473px;
     }
-    #miniheader2{ 
-        width: 363px;
-    }
 }
 
 @media (min-width: 766px) {
     #containerUtama{
         width:766px;
-    }
-    #miniheader2{ 
-        width: 655px;
-    }
-    #gambarkanan{
-        height: 250px;
     }
 }
 
@@ -344,13 +305,6 @@ margin-top: -2px;
     #containerUtama{
         width:1045px;
     }
-    #miniheader2{ 
-        width: 935px;
-    }
-    #gambarkanan{
-        height: 400px;
-    }   
 }
-
 
 /* Akhir Respondsive ================================================================================= */
