@@ -1,8 +1,16 @@
 body{
     background-image: url("/img/bi.jpeg");
-    background-repeat: repeat-x;
-    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
     font-family: Arial;
+}
+
+.list-group-item.list-group-item-action.active{
+    background-color: rgb(24, 204, 168);
+    border: solid 1px black;
+    /* color: #FFC107;
+    text-shadow: black 1px solid; */
 }
 
 #navbaratas{
@@ -16,7 +24,7 @@ body{
     margin-top: 10px;
 }
 
-#isi{
+#isiindex{
     margin-left: -20px;
 }
 

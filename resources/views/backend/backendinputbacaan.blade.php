@@ -14,31 +14,18 @@
     </div>
     @endif
     
-    <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="../backendindex" method="POST">
+    <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="../backendinputbacaan/store" method="POST" enctype="multipart/form-data">
         
         @csrf
 
-        <div class="form-group mb-4">
-            <label for="exampleFormControlInput1">Pihak penginput</label>
-              @error('postedby')
-                  <div class="alert alert-danger">{{ $message }}</div>
-              @enderror 
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="postedby">
-        </div>
-        
-        <div class="form-group mb-4">
-          <label for="exampleFormControlInput1">Judul</label>
-            @error('judul')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror 
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="judul">
-        </div>
+        {{-- menggunakan blade agar bisa menaruh form di tempat lain dan dinamis --}}
+        <x-textfield field="postedby" label="Postedby" type="text" value=""/>
 
         <label>Perihal</label>
         @error('perihal')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror 
-        <div>
+        <div class="form-group mb-3">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" id="inlineRadio1" value="berita" name="perihal">
                 <label class="form-check-label" for="inlineRadio1">Berita</label>
@@ -48,19 +35,19 @@
                 <label class="form-check-label" for="inlineRadio2">Kegiatan</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="inlineRadio2" value="artikel" name="perihal">
-                <label class="form-check-label" for="inlineRadio2">Artikel</label>
+                <input class="form-check-input" type="radio" id="inlineRadio3" value="artikel" name="perihal">
+                <label class="form-check-label" for="inlineRadio3">Artikel</label>
             </div>
         </div>
+    
 
-        <div class="form-group mt-3">
-          <label for="exampleFormControlTextarea1">Isi</label>
-            @error('isi')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror 
-          <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" style="height: 240px;" name="isi"></textarea>
-            <center><label>Anda bisa melebarkannya dengan menarik pojok kanan bawah pada kolom isi</label></center>
-        </div>
+        <x-textfield field="judul" label="Judul" type="text" value=""/>
+
+        <x-file field="gambar" label="Gambar" value=""/>
+
+        <x-textarea field="isi" label="Isi" value=""/>
+
+        <center><label>Anda bisa melebarkannya dengan menarik pojok kanan bawah pada kolom isi</label></center>
 
         <div class="div" style="float: right">
             <button class="btn btn-submit text-light bg-success float-right mt-4" type="submit" >Simpan</button>

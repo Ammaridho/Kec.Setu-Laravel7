@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/backend.css">
+
     <title>Back End</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/icon/lambang.png"/>
 
   </head>
   <body>
@@ -18,8 +20,8 @@
     <div class="container mt-2">
         {{-- navbar atas --}}
           <nav class="navbar text-light sticky-top rounded" id="navbaratas">
-              <a class="navbar-brand text-light font-weight-bold" href="/backendindex"><img src="/img/icon/lambang.png" width="30" height="30" alt=""> Kec. Setu</a>
-              <a class="navbar-brand text-warning font-weight-bold" href="/" style="font-size: 14px">FRONT END</a>
+              <p class="navbar-brand text-light font-weight-bold" disabled><img src="/img/icon/lambang.png" width="30" height="30" alt=""> Kec. Setu</p>
+              <a class="navbar-brand text-warning font-weight-bold" href="{{route('logout')}}" style="font-size: 14px">FRONT END</a>
           </nav>    
       {{-- akhir navbar atas --}}
 

@@ -1,9 +1,14 @@
 
 body{
     background-image: url("/img/bi.jpeg");
-    background-repeat: repeat-x;
-    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
     font-family: Arial;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 #containerUtama{
@@ -16,11 +21,11 @@ body{
 #tanggalheader{
     font-family: Arial;
     display: inline-block;
-    margin-left: -3px;
+    margin-left: -6px;
     font-size: 12px; 
     line-height: 1px;
     color: rgb(23,165,137);
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     width: 80px;
     height: 18px;
     border: solid 0px;
@@ -32,7 +37,7 @@ body{
 }
 
 #divsearchtextinput{
-margin-top: -2px;
+margin-top: -3px;
 }
 
 #searchForm{
@@ -48,7 +53,7 @@ margin-top: -2px;
     height: 31px;
     width: 120px;
     margin-top: 1px;
-    margin-right: -5px;
+    margin-right: -3px;
     font-size: 12px;
     text-indent: 10px;
 }
@@ -58,8 +63,8 @@ margin-top: -2px;
     border-bottom: 0px;
     border-right: 0px;
     border-left: 0px;
-    width:25px;
-    height: 31px;
+    width:30px;
+    height: 32px;
     margin-right: -15px;
     background-color: rgb(23,165,137);
 }
@@ -122,18 +127,42 @@ margin-top: -2px;
 }
 
 .dropdown-menu{
-    border-top: 1px solid rgb(23,165,137);
+    border-top: 3px solid rgb(23,165,137);
     background-color: #2e2e2ef6;
 }
 
 #navbarNavDropdown{
+<<<<<<< HEAD
     background-color: #2e2e2ef6;
     border-top: 0.1px solid rgba(0, 0, 0, 0.192);
     text-align: left;
 
+=======
+    /* border-top: 0.1px solid rgba(0, 0, 0, 0.192); */
+    text-align: left;
+    background-color: #2e2e2ef6;
+>>>>>>> tanparelasi
 }
 
 /* HeadLine News */
+.wadah-mengetik
+{
+	font-size: 22px;
+	width: 740px;
+	white-space:nowrap;
+	overflow:hidden;
+	-webkit-animation: ketik 1s steps(100, end);
+	animation: ketik 1s steps(100, end);
+}
+
+@keyframes ketik{
+		from { width: 0; }
+}
+
+@-webkit-keyframes ketik{
+		from { width: 0; }
+}
+
 #miniheader1{
     background-color: rgb(23,165,137);
     width: 110px;
@@ -215,6 +244,15 @@ margin-top: -2px;
     font-size: 13px;
     font-family: Arial;
 }
+#btntag{
+    outline: rgb(68, 68, 68) dashed 0px;
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 2px 0px inset, rgba(0, 0, 0, 0.1) 0px 0px 2px 0px;
+    font-size: 11px;
+    padding: 2px;
+    border: 1px solid  #E9E9E9;
+    color:  #444444;
+}
 
 #judultab{
     text-indent: -9px;
@@ -244,6 +282,101 @@ margin-top: -2px;
     background-size: cover;
 }
 
+/* Slide View Jumbotron =================== */
+        
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999999999; /* Sit on top */
+  padding-top: 170px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  /* height: 100%; Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  margin-top: -70px;
+  display: block;
+  width: 30%;
+  max-width: 400px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 50px;
+  right: 32%;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 50%;
+  }
+  .close{
+    right: 20%;
+  }
+}
+
+
+/* Akhir Slide View Jumbotron ============= */
+
 /* akhir content */
 
 /* Akhir Utama ============================================================================================ */
@@ -263,6 +396,14 @@ margin-top: -2px;
     font-weight: bold;
     border-bottom: 1px solid black;
     padding-bottom: 10px;
+}
+
+#btntagbawah{
+    font-size: 11px;
+    padding: 5px;
+    border: 2px solid rgb(23,165,137);
+    background-color: #333333;
+    color: white;
 }
 
 .isikontenfooter{
@@ -289,6 +430,7 @@ margin-top: -2px;
 /* Akhir Footer ====================================================================================== */
 
 /* Respondsive ===================================================================================== */
+
 @media (max-width: 766px) {
     #containerUtama{
         width:473px;

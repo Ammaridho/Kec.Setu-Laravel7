@@ -13,6 +13,11 @@
 
     
     <title>Kec. Setu- Kota Tangerang Selatan</title>
+<<<<<<< HEAD
+=======
+    <link rel="shortcut icon" type="image/jpg" href="img/icon/lambang.png"/>
+
+>>>>>>> tanparelasi
   </head>
   <body>
 
@@ -23,14 +28,16 @@
             <!-- layer 1 -->
             <div class="row bg-light" id="headerlayer1">
 
-                <div class="col-sm-3" id="divtanggalheader">
-                    <input type="text" name="search" value="31 Maret 2021" id="tanggalheader" disabled>
+                <div class="col-3" id="divtanggalheader">
+                    <input type="text" name="search" value="{{Carbon\Carbon::now()->format('d  M  Y')}}" id="tanggalheader" disabled>
                 </div>
 
-                <div class="col-sm-9" id="divsearchtextinput">
-                    <form class="formSearch" id="searchForm" action="" method="get">
+                <div class="col-9" id="divsearchtextinput">
+                    <form class="formSearch" id="searchForm" action="/search" method="get">
                         <input type="text" name="search" placeholder="Pencarian Berita" id="searchtextinput">
-                        <button type="submit" id="submitSearch">C</button>
+                        <button type="submit" id="submitSearch"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-light" viewBox="0 -2 20 20">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
                     </form>
                 </div>
 
@@ -45,7 +52,9 @@
             <div class="row sticky-top" id="headerlayer3">
                 <nav class="navbar navbar-expand-xl navbar-dark" id="navbaratas">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbaratasCollapse">
-                    <span class="">Menu</span>
+                    <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 20 25">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                      </svg></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
@@ -117,8 +126,8 @@
                                 Gallery
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Album Foto</a>
-                                <a class="dropdown-item" href="#">Album Video</a>
+                                <a class="dropdown-item" href="/gambargallery">Album Foto</a>
+                                <a class="dropdown-item" href="/videogallery">Album Video</a>
                             </div>
                         </li>
                         <li class="nav-item active">
@@ -128,7 +137,11 @@
                             <a class="nav-link" href="#" id="ygborder">Informasi Publik</a>
                         </li>
                         <li class="nav-item active">
+<<<<<<< HEAD
                             <a class="nav-link" href="#" id="ygborder">BACK END</a>
+=======
+                            <a class="nav-link text-warning font-weight-bold" href="../login" id="ygborder">BACK END</a>
+>>>>>>> tanparelasi
                         </li>
                     </ul>
                     </div>
@@ -180,8 +193,25 @@
                 <div class="col-fluid shadow-md p-1" id="miniheader1">
                     <h6 id="hntext">HEADLINE NEWS</h6>
                 </div>
+
                 <div class="col-fluid shadow-md p-1 bg-light" id="miniheader2">
-                    <h6 id="isihntext">Ini adalah berita berita terbaru</h6>
+                   
+                    <div id="carouselExampleCaptions miniheader2" data-ride="carousel">
+            
+                        <div class="carousel-inner">
+            
+                            <div class="carousel-item active">
+                                <a href="../{{$bacaan[0]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[0]->judul}}</p>
+                            </div>
+            
+                            @for ($i = 1; $i < count($bacaan); $i++)
+                                <div class="carousel-item">
+                                    <a href="../{{$bacaan[$i]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[$i]->judul}}</p></a>
+                                </div>
+                            @endfor
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         <!-- Akhir Mini Header =====================================================================================-->
@@ -383,10 +413,11 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active pt-3 pb-3" id="baru" role="tabpanel" aria-labelledby="baru-tab">
+                            <div class="tab-pane fade show active pt-3" id="baru" role="tabpanel" aria-labelledby="baru-tab">
                                 
                                 <div class="row mb-3">
 
+<<<<<<< HEAD
                                     <div class="col-sm-6">
                                         <img src="/img/baru1.PNG" alt="error" id="gambartabbaru">
                                     </div>
@@ -394,6 +425,20 @@
                                     <div class="col-sm-6 pt-1">
                                         <p style="font-size:13px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
                                         <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">05 Agustus 2021</p>
+=======
+                                    <div class="row mt-1 mb-2" >
+                                        <div class="col-5">
+                                            {{-- @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars) --}}
+                                            <a href="../{{$item->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru"></a>
+                                            {{-- @endforeach --}}
+                                        </div>
+                                        
+                                        <div class="col-7">
+                                            <a href="../{{$item->id}}/isibacaan"><p style="font-size:13px; font-weight:400px; line-height:15px; color:black;">{{$item->judul}}</p></a>
+                                            <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->created_at}}</p>
+                                        </div>
+                                        
+>>>>>>> tanparelasi
                                     </div>
                                     
                                 </div>
@@ -411,26 +456,74 @@
                                     
                                 </div>
 
+                                <a href="/beritakecamatan"><p style="font-size:12px; margin-top: 15px; color:#B3B3B3;">Tampilkan semua >></p></a>
+
                             </div>
-                            <div class="tab-pane fade" id="tags" role="tabpanel" aria-labelledby="tags-tab">Tags</div>
+                            <div class="tab-pane fade pt-3" id="tags" role="tabpanel" aria-labelledby="tags-tab">
+                                <a href="../tags/{{'berita'}}"><button id="btntag">Berita</button></a>
+                                <a href="../tags/{{'kegiatan'}}"><button id="btntag">Kegiatan</button></a>
+                                <a href="../tags/{{'artikel'}}"><button id="btntag">Artikel</button></a>
+                            </div>
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <h6 id="judulkonten">VIDEO</h6> 
+=======
+                    <div class="row">
+                        <div class="col-2">
+                            <h6 id="judulkonten">VIDEO</h6>
+                        </div>
+                        <div class="col-10" id="lokasipatern">
+                            <div class="patern"></div>
+                        </div>
+                    </div>
+
+                    
+>>>>>>> tanparelasi
                     <div class="bg-white rounded mb-4 p-2 text-center" id="contentkanan">
-                        <iframe class="embed-responsive-item" style="width: 100%;" src="https://www.youtube.com/embed/QeqbrVFOO74" frameborder="0" allowfullscreen></iframe>
-                        <iframe class="embed-responsive-item" style="width: 100%;" src="https://www.youtube.com/embed/UgX2Kjn8yo4" frameborder="0" allowfullscreen></iframe>
+                        @foreach ($videogallery as $item)
+                            <iframe class="embed-responsive-item mb-1" style="width: 100%;" src="{{$item->video}}" frameborder="0" allowfullscreen></iframe>
+                        @endforeach
                     </div>     
+                    
 
                     <div class="rounded mb-4" id="gambarkanan">
+<<<<<<< HEAD
+=======
+                        <img id="myImg" src="/img/gambar.PNG" alt="Pengaduan Tangsel" style="width:100%; height:100%;">
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <h6 id="judulkonten">SOSIAL MEDIA</h6>
+                        </div>
+                        <div class="col-6" id="lokasipatern">
+                            <div class="patern"></div>
+                        </div>
+>>>>>>> tanparelasi
                     </div>
 
                     <h6 id="judulkonten">SOSIAL MEDIA</h6>
                     <div class="bg-white rounded mb-4 p-2 text-center" id="contentkanan">
+<<<<<<< HEAD
                         <img src="/img/icon/youtube.png" alt="iconyoutube" id="iconsm">
                         <img src="/img/icon/facebook.png" alt="iconfacebook" id="iconsm">
                         <img src="/img/icon/twitter.png" alt="icontwitter" id="iconsm">
                         <img src="/img/icon/instagram.png" alt="iconinstagram" id="iconsm">
+=======
+                        <a href="https://www.youtube.com/channel/UCiv-tVNor79V-nnRDp-fRqQ"><img src="/img/icon/youtube.png" alt="iconyoutube" id="iconsm"></a>
+                        <a href="https://www.facebook.com/HumasTangsel/"><img src="/img/icon/facebook.png" alt="iconfacebook" id="iconsm"></a>
+                        <a href="https://twitter.com/humastangsel/"><img src="/img/icon/twitter.png" alt="icontwitter" id="iconsm"></a>
+                        <a href="https://www.instagram.com/humaskotatangsel/"><img src="/img/icon/instagram.png" alt="iconinstagram" id="iconsm"></a>
+>>>>>>> tanparelasi
                     </div>
 
                     <h6 id="judulkonten">TAUTAN</h6>
@@ -452,7 +545,9 @@
                 <div class="col-sm-4">
                     <h5 id="judulfooter">TAG TERKAIT</h5>
                     <div class="isikontenfooter">
-
+                        <button id="btntagbawah">Berita</button>
+                        <button id="btntagbawah">Kegiatan</button>
+                        <button id="btntagbawah">Artikel</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
