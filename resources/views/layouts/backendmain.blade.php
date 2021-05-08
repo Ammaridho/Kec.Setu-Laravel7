@@ -20,10 +20,12 @@
     <div class="container mt-2">
         {{-- navbar atas --}}
           <nav class="navbar text-light sticky-top rounded" id="navbaratas">
-              <p class="navbar-brand text-light font-weight-bold" disabled><img src="/img/icon/lambang.png" width="30" height="30" alt=""> Kec. Setu</p>
+              <img src="/img/icon/lambang.png" width="30" height="30" alt="">
+              {{-- <p class="navbar-brand text-light font-weight-bold"> Kec. Setu</p> --}}
+              <a class="navbar-brand text-light font-weight-bold float-left mr-auto ml-2" href="" style="font-size: 20px">Kec. Setu</a>
               <a class="navbar-brand text-warning font-weight-bold" href="{{route('logout')}}" style="font-size: 14px">FRONT END</a>
           </nav>    
-      {{-- akhir navbar atas --}}
+        {{-- akhir navbar atas --}}
 
         <main>
 

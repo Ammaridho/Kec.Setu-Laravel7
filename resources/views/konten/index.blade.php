@@ -22,17 +22,17 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <a href="../{{$bacaan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[0]->gambar}}" class="d-block w-100" alt="..." style="height: 360px"></a>
-                    <div class="carousel-caption d-none d-md-block rounded" id="judulberitajumbotron">
-                        <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan" style="text-decoration: none;"><h6>{{$bacaan[0]->judul}}</h6></a>
+                    <a href="../{{$bacaan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[0]->gambar}}" class="d-block w-100" alt="..."  id="ukurangambarjumbotron"></a>
+                    <div class="carousel-caption rounded" id="judulberitajumbotron">
+                        <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan" style="text-decoration: none;"id="tulisanjumbotron">{{$bacaan[0]->judul}}</a>
                     </div>
                 </div>
 
                 @for ($i = 1; $i < count($bacaan); $i++)
                 <div class="carousel-item">
-                    <a class="text-dark" href="../{{$bacaan[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[$i]->gambar}}" class="d-block w-100" alt="..." style="height: 360px"></a>
-                    <div class="carousel-caption d-none d-md-block rounded" id="judulberitajumbotron">
-                        <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan"><h6>{{$bacaan[$i]->judul}}</h6></a>
+                    <a class="text-dark" href="../{{$bacaan[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[$i]->gambar}}" class="d-block w-100" alt="..."  id="ukurangambarjumbotron"></a>
+                    <div class="carousel-caption rounded" id="judulberitajumbotron">
+                        <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan" style="text-decoration: none;" id="tulisanjumbotron">{{$bacaan[$i]->judul}}</a>
                     </div>
                 </div>
                 @endfor
@@ -66,10 +66,11 @@
                 <div class="row">
                 
                     <div class="col-sm-6" style="padding:10px;">
-                        <div style="margin-left:20px">
-                            <a href="../{{$berita[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$berita[0]->gambar}}" alt="error" id="gambarberitaindex" style="width: 90%;"></a>
+                        <div style="margin-left:20px; margin-right:20px;">
+                            {{-- <a href="../{{$kegiatan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$kegiatan[0]->gambar}}" alt="error" id="gambarberitaindex"></a> --}}
+                            <a href="../{{$berita[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$berita[0]->gambar}}" alt="error" id="gambarberitaindex"></a>
                             <a class="text-dark" href="../{{$berita[0]->id}}/isibacaan"><h5 id="judulgambarberitaindex">{{$berita[0]->judul}}</h5></a>
-                       
+                        
                         @if (($berita[0]->updated_at) != null)
                             <?php $tanggal = $berita[0]->updated_at?>
                         @elseif (($berita[0]->created_at) != null)
@@ -79,7 +80,7 @@
                         @endif
                             
                         <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
-                        <p id="tulisannormal">{{substr($berita[0]->isi,0,45)}}..</p>
+                        <p id="tulisannormal">{{substr($berita[0]->isi,0,100)}}..</p>
                         <div class="readmore"><a href="../{{$berita[0]->id}}/isibacaan" id="tulisannormal" style="color: black">Read More >></a></div>
                         </div>
                     </div>
@@ -105,7 +106,7 @@
                                 </div>
                                 
                                 <div class="col-8 pt-1">
-                                    <a class="text-dark" href="../{{$berita[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$berita[$i]->judul}}</p></a>
+                                    <a class="text-dark" href="../{{$berita[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px; text-align:justify;">{{$berita[$i]->judul}}</p></a>
                                 </div>
                                 
                             </div>
@@ -143,7 +144,7 @@
                     <?php $tanggal = 'Belum ada tanggal' ?>
                 @endif
                 <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
-                <p id="tulisannormal">{{substr($kegiatan[0]->isi,0,45)}}</p>
+                <p id="tulisannormal">{{substr($kegiatan[0]->isi,0,100)}}..</p>
                 <div class="readmore mb-3"><a href="../{{$kegiatan[0]->id}}/isibacaan" id="tulisannormal" style="color: black;">Read More >></a></div>
      
 
@@ -166,7 +167,7 @@
                         </div>
                         
                         <div class="col-8 pt-1">
-                            <a class="text-dark" href="../{{$kegiatan[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$kegiatan[$i]->judul}}</p></a>
+                            <a class="text-dark" href="../{{$kegiatan[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px; text-align:justify;">{{$kegiatan[$i]->judul}}</p></a>
                         </div>
 
                     
@@ -199,7 +200,7 @@
                     <?php $tanggal = 'Belum ada tanggal' ?>
                 @endif
                 <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
-                <p id="tulisannormal">{{substr($artikel[0]->isi,0,45)}}</p>
+                <p id="tulisannormal">{{substr($artikel[0]->isi,0,100)}}..</p>
                 <div class="readmore"><a href="../{{$artikel[0]->id}}/isibacaan" id="tulisannormal" style="color: black">Read More >></a></div>
 
                 @for ($i = 1; $i < count($artikel); $i++)
@@ -220,7 +221,7 @@
                         </div>
                         
                         <div class="col-8 pt-1">
-                            <a class="text-dark" href="../{{$artikel[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px;";>{{$kegiatan[$i]->judul}}</p></a>
+                            <a class="text-dark" href="../{{$artikel[$i]->id}}/isibacaan"><p style="font-size:14px; font-weight:400px; line-height:15px; text-align:justify;">{{$kegiatan[$i]->judul}}</p></a>
                         </div>
 
                     </div>

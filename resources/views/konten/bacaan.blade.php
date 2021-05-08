@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container bg-white rounded pl-3" id="contentkiri"> 
+    <div class="container bg-white rounded pl-3 mb-3" id="contentkiri"> 
 
         <div class="row">
             <div class="col-sm-12 mt-3">
@@ -22,7 +22,7 @@
 
         <div class="row">
             <div class="col-12">
-                <p style="font-size:11px; font-family: Arial; color:#aaaaaa;">Posted by: {{$bacaandetail->postedby}} , {{$tanggal}} , <span style="font-size:11px; font-family: Arial; font-weight:bold; color:red;"> Telah Di Lihat Sebanyak: 105</span></p>
+                <p style="font-size:11px; font-family: Arial; color:#aaaaaa;">Posted by: {{$bacaandetail->postedby}} , {{$tanggal}} , <span style="font-size:11px; font-family: Arial; font-weight:bold; color:red;">Di Lihat: {{$banyaklihat->dilihat}} </span></p>
             </div>
         </div>
 

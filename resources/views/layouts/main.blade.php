@@ -210,12 +210,14 @@
                                             <a href="../{{$item->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru"></a>
                                             {{-- @endforeach --}}
                                         </div>
-                                        
+
                                         <div class="col-7">
-                                            <a href="../{{$item->id}}/isibacaan"><p style="font-size:13px; font-weight:400px; line-height:15px; color:black;">{{$item->judul}}</p></a>
+                                            <a href="../{{$item->id}}/isibacaan"><p id="judulBerita">{{$item->judul}}</p></a>
                                             <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->created_at}}</p>
                                         </div>
                                         
+                                        <hr size="10px"/>
+
                                     </div>
 
                                 @endforeach
@@ -325,6 +327,7 @@
 
                     <div class="isikontenfooter">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.049068149776!2d106.673745!3d-6.3276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xde6d034bf745a26c!2sKantor%20Camat%20Setu%20Tangerang%20Selatan!5e0!3m2!1sid!2sid!4v1617548183617!5m2!1sid!2sid" width="100%" height="145" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <br><br>
                         <p class="text-light" id="aks">Alamat : <br>
                             Jl. Raya Puspitek, Setu, Kota Tangerang Selatan, Banten 15314</p>
                         <p class="text-light" id="aks">No Telp : (021) 75791444
