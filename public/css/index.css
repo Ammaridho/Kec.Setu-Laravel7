@@ -1,9 +1,8 @@
 #carouselExampleCaptions{
-    width: 100%;
     background-position: center;
     overflow:auto;
     background-size: cover;
-    width: 100%; 
+    /* width: 100%;  */
     margin: 15px 22px;
 }
 
@@ -141,6 +140,16 @@
   #kegiatanlainnya{
       width: 200px;
   }
+  #ukurangambarjumbotron{
+      height:230px;
+    }
+    #carouselExampleCaptions{
+      height:230px;
+      margin-right: -10px; 
+      margin-left: -10px;
+      margin-top: -10px;
+      margin-bottom: -10px;
+    }
   
 }
 
@@ -150,9 +159,11 @@
     }
     #ukurangambarjumbotron{
       height:230px;
+      width: 1000px;
     }
     #carouselExampleCaptions{
       height:230px; 
+      width: 1000px;
     }
     #judulberitajumbotron{
       font-size: 10px;

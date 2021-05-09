@@ -176,7 +176,7 @@
             <div class="row bg-light p-3 mt-1">
 
                 {{-- konten kiri --}}
-                <div class="col-md-8">
+                <div class="col-md-8 mb-2">
 
                     
                     @yield('content')

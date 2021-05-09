@@ -28,7 +28,7 @@
                     </div>
                 </div>
 
-                @for ($i = 1; $i < count($bacaan); $i++)
+                @for ($i = 1; $i < 3; $i++)
                 <div class="carousel-item">
                     <a class="text-dark" href="../{{$bacaan[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[$i]->gambar}}" class="d-block w-100" alt="..."  id="ukurangambarjumbotron"></a>
                     <div class="carousel-caption rounded" id="judulberitajumbotron">
