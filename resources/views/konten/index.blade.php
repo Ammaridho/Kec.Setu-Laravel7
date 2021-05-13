@@ -11,7 +11,7 @@
 </div>
 @endif --}}
 
-    <div class="row mb-4">
+    <div class="row mb-2">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -50,9 +50,8 @@
         </div>
     </div>
 
-
     <div class="row mb-4">
-        <div class="col-sm-12">
+        <div class="col-sm-12 pt-3">
             <div class="row">
                 <div class="col-2">
                     <h6 id="judulkonten" style="font-size: 22px">BERITA</h6>
@@ -65,7 +64,7 @@
 
                 <div class="row">
                 
-                    <div class="col-sm-6" style="padding:10px;">
+                    <div class="col-md-6" style="padding:10px;">
                         <div style="margin-left:20px; margin-right:20px;">
                             {{-- <a href="../{{$kegiatan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$kegiatan[0]->gambar}}" alt="error" id="gambarberitaindex"></a> --}}
                             <a href="../{{$berita[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$berita[0]->gambar}}" alt="error" id="gambarberitaindex"></a>
@@ -80,13 +79,15 @@
                         @endif
                             
                         <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
-                        <p id="tulisannormal">{{substr($berita[0]->isi,0,100)}}..</p>
+                        {{-- <p id="tulisannormal">{{substr($berita[0]->isi,0,100)}}..</p> --}}
+                        <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$berita[0]->isi)),0,250)}}..</p>
+                        
                         <div class="readmore"><a href="../{{$berita[0]->id}}/isibacaan" id="tulisannormal" style="color: black">Read More >></a></div>
                         </div>
                     </div>
                     
                     
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                         
                         @for ($i = 1; $i < count($berita); $i++)
                         
@@ -121,7 +122,7 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-6 mb-4">
+        <div class="col-md-6 mb-4">
             <div class="row">
                 <div class="col-4">
                     <h6 id="judulkonten" style="font-size: 22px">KEGIATAN</h6>
@@ -144,7 +145,7 @@
                     <?php $tanggal = 'Belum ada tanggal' ?>
                 @endif
                 <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
-                <p id="tulisannormal">{{substr($kegiatan[0]->isi,0,100)}}..</p>
+                <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$kegiatan[0]->isi)),0,250)}}..</p>
                 <div class="readmore mb-3"><a href="../{{$kegiatan[0]->id}}/isibacaan" id="tulisannormal" style="color: black;">Read More >></a></div>
      
 
@@ -179,7 +180,7 @@
             
         </div>
 
-        <div class="col-sm-6 mb-4">
+        <div class="col-md-6 mb-4">
             <div class="row">
                 <div class="col-3">
                     <h6 id="judulkonten" style="font-size: 22px">ARTIKEL</h6>
@@ -200,7 +201,7 @@
                     <?php $tanggal = 'Belum ada tanggal' ?>
                 @endif
                 <h6 id="tanggalgambarberitaindex">{{$tanggal}}</h6>
-                <p id="tulisannormal">{{substr($artikel[0]->isi,0,100)}}..</p>
+                <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$artikel[0]->isi)),0,250)}}..</p>
                 <div class="readmore"><a href="../{{$artikel[0]->id}}/isibacaan" id="tulisannormal" style="color: black">Read More >></a></div>
 
                 @for ($i = 1; $i < count($artikel); $i++)

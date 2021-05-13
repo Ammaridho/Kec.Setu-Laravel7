@@ -4,11 +4,23 @@
 
 @section('content')
 
-    <div class="container bg-white rounded pl-3 mb-3" id="contentkiri"> 
+    <head>
+        <style>
+            #judulBeritadetail{
+                font-weight: bold;
+                font-size: 20px; 
+                color:#6E6E6E;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+
+    <div class="container bg-white rounded pl-3" id="contentkiri"> 
 
         <div class="row">
             <div class="col-sm-12 mt-3">
-                <h4 id="judulBerita">{{$bacaandetail->judul}}</h4>
+                <h2 id="judulBeritadetail">{{$bacaandetail->judul}}</h2>
             </div>
         </div>
 
@@ -31,8 +43,10 @@
         </div>
 
         <div class="row">
-            <div class="col-12 mt-4">
-                <pre id="isibacaan" disabled>{{$bacaandetail->isi}}</pre>
+            <div class="col-12 mt-4" id="tulisanbacaan">
+                <?php
+                    echo htmlspecialchars_decode(stripslashes($bacaandetail->isi));
+                ?>
             </div>
         </div>
 

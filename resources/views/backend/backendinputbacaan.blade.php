@@ -44,9 +44,14 @@
         <x-textfield field="judul" label="Judul" type="text" value=""/>
 
         <x-file field="gambar" label="Gambar" value=""/>
+        
+        {{-- <x-textarea field="isibiasa" label="Isi Biasa" value=""/> --}}
 
-        <x-textarea field="isi" label="Isi" value=""/>
-
+        <label for="">Isi</label>
+        <div class="textarea" style="background-color: white; color:black; margin-bottom:30px;" >
+            <textarea id="summernote" name="isi"></textarea>
+        </div>
+        
         <center><label>Anda bisa melebarkannya dengan menarik pojok kanan bawah pada kolom isi</label></center>
 
         <div class="div" style="float: right">

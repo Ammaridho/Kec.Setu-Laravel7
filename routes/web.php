@@ -79,15 +79,17 @@ Route::group(['middleware' => 'ceksession'], function(){
 
     //searcing
     Route::get('/backendsearch/berita','backendController@hasilbackendsearchberita');
+    Route::get('/backendsearch/deskripsi','backendController@hasilbackendsearchdeskripsi');
     Route::get('/backendsearch/pengaduan','backendController@hasilbackendsearchpengaduan');
     Route::get('/backendsearch/gambar','backendController@hasilbackendsearchgambargallery');
+    
+
+    //baca bacaan
+    Route::get('/bacaan/{id}','backendController@bacabacaan');
 
     //inputbacaan
     Route::get('/backendinputbacaan','backendController@inputbacaan');
     Route::post('/backendinputbacaan/store','backendController@storebackendinputbacaan');
-
-    //baca bacaan
-    Route::get('/bacaan/{id}','backendController@bacabacaan');
 
     //edit bacaan
     Route::get('/bacaan/{id}/edit','backendController@editbacaan');
@@ -95,6 +97,20 @@ Route::group(['middleware' => 'ceksession'], function(){
 
     //hapus bacaan
     Route::delete('/backendindex/bacaan/{id}','backendController@destroybacaan');
+
+    //baca deskripsi
+    Route::get('/deskripsi/{id}','backendController@bacadeskripsi');
+
+    //input deskripsi
+    Route::get('/backendinputdeskripsi','backendController@inputdeskripsi');
+    Route::post('/backendinputdeskripsi/store','backendController@storebackendinputdeskripsi');
+
+    //edit deskripsi
+    Route::get('/deskripsi/{id}/edit','backendController@editdeskripsi');
+    Route::put('/deskripsi/{id}','backendController@editdeskripsirestore');
+
+    //hapus deskripsi
+    Route::delete('/backendindex/deskripsi/{id}','backendController@destroydeskripsi');
 
     //baca pengaduan
     Route::get('/pengaduan/{id}','backendController@bacapengaduan');

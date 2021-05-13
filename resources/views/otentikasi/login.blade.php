@@ -2,7 +2,7 @@
 
 @section('backendcontent')
 
-<form class="pl-5 pb-5 pr-5 pt-2 bg-dark text-light rounded" style="width: 400px; margin: 80px auto" method="POST" action="../login">
+<form class="pl-5 pb-5 pr-5 pt-2 bg-dark text-light rounded" style="width: 400px; margin: 50px auto" method="POST" action="../login">
     
     @csrf
 

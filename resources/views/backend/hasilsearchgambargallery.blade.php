@@ -13,7 +13,7 @@
     <h2 class="text-center mt-3">DAFTAR GAMBAR</h2>
     <h6 class="mt-2 text-center" id="judulkonten" style="font-size: 22px">Cari : {{$keyword}}</h6>
 
-    <div class="bg-white rounded p-4" id="contentkiri">
+    <div class="rounded p-4" id="contentkiri">
 
         @foreach ($hasilsearch as $a)
             <div class="col card m-2">
