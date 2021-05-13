@@ -5,19 +5,170 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="shortcut icon" type="image/jpg" href="img/icon/lambang.png"/>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/index.css">
-
+    <link rel="stylesheet" href="/css/animate.css">
     
     <title>Kec. Setu- Kota Tangerang Selatan</title>
-<<<<<<< HEAD
-=======
-    <link rel="shortcut icon" type="image/jpg" href="img/icon/lambang.png"/>
 
->>>>>>> tanparelasi
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+    <style>
+
+        /* hilangkan scroll */
+        .navbar-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .navbar-nav {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+
+        /* Respondsive ===================================================================================== */
+
+        @media (max-width: 766px) {
+            #containerUtama{
+                width:424px;
+            }
+            #miniheader2{ 
+                width: 314px;
+            }
+            #asasasas{
+                /* background-color: #000000; */
+                background-image: url("/img/mobile.png");
+            }
+            .navbar-collapse{
+                border-top: 3px solid rgb(23,165,137);
+                margin-right: 220px;
+                background-color: #242424e3;
+                margin-left: -2px;
+                margin-top: -1px;
+                border-radius: 0px 30px 30px 30px;
+            }
+            .dropdown-menu{
+                border-top: 3px solid rgb(23,165,137);
+                border-bottom: 3px solid rgb(23,165,137);
+            }
+            .navbar-nav{
+                border: 1px solid rgb(23,165,137);
+                height: 420px;
+                overflow-y:scroll;
+                background-color: rgba(15, 15, 15, 0.479);
+                border-radius: 0px 30px 30px 30px;
+            }
+            #watermark{
+                font-size: 12px;
+                margin-left: 12px;
+            }
+
+            #hntext{
+                line-height: 27px;
+            } 
+        }
+
+        @media (min-width: 766px) {
+            #containerUtama{
+                width:766px;
+            }
+            #miniheader2{ 
+                width: 655px;
+            }
+            #gambarkanan{
+                height: 250px;
+            }
+            #asasasas{
+                background-image: url("/img/tablet.png");
+                /* background-color: #000000; */
+            }
+            #hntext{
+                line-height: 23px;
+            } 
+        }
+
+        @media all and (max-width: 1046px) and (min-width: 766px) {
+            .navbar-collapse{
+                border-top: 3px solid rgb(23,165,137);
+                margin-right: 550px;
+                background-color: #242424e3;
+                margin-left: -2px;
+                margin-top: -1px;
+                border-radius: 0px 30px 30px 30px;
+            }
+            .navbar-nav{
+                border: 1px solid rgb(23,165,137);
+                height: 420px;
+                overflow-y:scroll;
+                background-color: rgba(15, 15, 15, 0.479);
+                border-radius: 0px 30px 30px 30px;
+            }
+            #hntext{
+                line-height: 23px;
+            } 
+        }
+
+        @media all and (max-width: 1199px) and (min-width: 1046px) {
+            .navbar-collapse{
+                border-top: 3px solid rgb(23,165,137);
+                margin-right: 800px;
+                background-color: #242424e3;
+                margin-left: -2px;
+                margin-top: -1px;
+                border-radius: 0px 30px 30px 30px;
+            }
+            .navbar-nav{
+                border: 1px solid rgb(23,165,137);
+                height: 420px;
+                overflow-y:scroll;
+                background-color: rgba(15, 15, 15, 0.479);
+                border-radius: 0px 30px 30px 30px;
+            }
+            #hntext{
+                line-height: 22px;
+            } 
+        }
+
+
+        @media (min-width: 1045px) {
+            #containerUtama{
+                width:1045px;
+            }
+            #miniheader2{ 
+                width: 935px;
+            }
+            #gambarkanan{
+                height: 400px;
+            }   
+            #asasasas{
+                /* background-color: #000000; */
+                background-image: url("/img/banner.png");
+            }
+            #hntext{
+                line-height: 22px;
+            } 
+        }
+
+        #asasasas{
+            height: 130px;
+            background-position: center;
+            overflow:auto;
+            background-size: cover;
+        }
+
+        /* Akhir Respondsive ================================================================================= */
+    </style>
+
   </head>
   <body>
 
@@ -28,11 +179,16 @@
             <!-- layer 1 -->
             <div class="row bg-light" id="headerlayer1">
 
-                <div class="col-3" id="divtanggalheader">
+                <div class="col-2" id="divtanggalheader">
                     <input type="text" name="search" value="{{Carbon\Carbon::now()->format('d  M  Y')}}" id="tanggalheader" disabled>
                 </div>
 
-                <div class="col-9" id="divsearchtextinput">
+                <div class="col-5">
+                    <h6 class="text-right" style="line-height: 30px; font-family:Fantasy;" id="watermark">Re-built By Ammaridho</h6>
+                </div>
+
+
+                <div class="col-5" id="divsearchtextinput">
                     <form class="formSearch" id="searchForm" action="/search" method="get">
                         <input type="text" name="search" placeholder="Pencarian Berita" id="searchtextinput">
                         <button type="submit" id="submitSearch"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-light" viewBox="0 -2 20 20">
@@ -44,154 +200,119 @@
             </div>
 
             <!-- layer 2 -->
-            <div class="bannertop row bg-success">
-                <img src="/img/banner.png" alt="bannertop">
+
+
+
+
+            <div class="bannertop row" >
+                <div class="col"id="asasasas">
+                </div>
             </div>
 
             <!-- layer 3 -->
             <div class="row sticky-top" id="headerlayer3">
                 <nav class="navbar navbar-expand-xl navbar-dark" id="navbaratas">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbaratasCollapse">
-                    <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 20 25">
-                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                      </svg></span>
+                    <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbaratasCollapse" style="border:1px solid rgb(23,165,137); padding-bottom:10px; margin-left:-5px;  line-height:1px; font-size:15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#F8F9FA" class="bi bi-menu-button-wide-fill" viewBox="0 0 16 16">
+                            <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+                          </svg> Menu
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#" style="line-height: 14px; margin-left:-10px;"> 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-                                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item active dropdown ml-2" id="ygborder">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profile
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Sekilas Kecamatan</a>
-                            <a class="dropdown-item" href="#">Visi dan Misi</a>
-                            <a class="dropdown-item" href="#">Tugas Pokok dan fungsi</a>
-                            <a class="dropdown-item" href="#">Struktur Organisasi</a>
-                            <a class="dropdown-item" href="#">Profil Pejabat</a>
-                            <a class="dropdown-item" href="#">Sambutan</a>
-                            <a class="dropdown-item" href="#">Prestasi Kecamatan</a>
-                        </div>
-                        </li>
-                        <li class="nav-item active dropdown" id="ygborder">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pelayanan
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Penerbitan E-KTP</a>
-                                <a class="dropdown-item" href="#">Penerbitan Kartu Keluarga</a>
-                                <a class="dropdown-item" href="#">Permohonan Surat Pindah</a>
-                                <a class="dropdown-item" href="#">Pengesahan SKDU dan Yayasan </a>
-                                <a class="dropdown-item" href="#">Pengesahan SKCK</a>
-                                <a class="dropdown-item" href="#">Pengesahan Surat Pernyataan Waris</a>
-                                <a class="dropdown-item" href="#">Permohonan Surat Dispensasi Pernikahan</a>
-                                <a class="dropdown-item" href="#">Pengesahan SKTM</a>
-                                <a class="dropdown-item" href="#">Penerbitan Akta Jual Beli/Hibah/Pembagian Hak</a>
-                            </div>
-                        </li>
-                        <li class="nav-item active dropdown" id="ygborder">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Kelurahan
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Kelurahan Setu</a>
-                                <a class="dropdown-item" href="#">Kelurahan Keranggan</a>
-                                <a class="dropdown-item" href="#">Kelurahan Muncul</a>
-                                <a class="dropdown-item" href="#">Kelurahan Babakan</a>
-                                <a class="dropdown-item" href="#">Kelurahan Bakti Jaya</a>
-                                <a class="dropdown-item" href="#">Kelurahan Kademangan</a>
-                            </div>
-                        </li>
-                        <li class="nav-item active dropdown" id="ygborder">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Produk Hukum
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Peraturan Daerah</a>
-                                <a class="dropdown-item" href="#">Peraturan Walikota</a>
-                                <a class="dropdown-item" href="#">Keputusan Walikota</a>
-                            </div>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#" id="ygborder">Berita Kecamatan</a>
-                        </li>
-                        <li class="nav-item active dropdown" id="ygborder">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Gallery
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/gambargallery">Album Foto</a>
-                                <a class="dropdown-item" href="/videogallery">Album Video</a>
-                            </div>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#" id="ygborder">Pengaduan</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#" id="ygborder">Informasi Publik</a>
-                        </li>
-                        <li class="nav-item active">
-<<<<<<< HEAD
-                            <a class="nav-link" href="#" id="ygborder">BACK END</a>
-=======
-                            <a class="nav-link text-warning font-weight-bold" href="../login" id="ygborder">BACK END</a>
->>>>>>> tanparelasi
-                        </li>
-                    </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/" style="line-height: 14px; margin-left:-10px;"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item active dropdown" id="ygborder">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Profile
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="../{{2}}/deskripsi">Sekilas Kecamatan</a>
+                                    <a class="dropdown-item" href="../{{3}}/deskripsi">Visi dan Misi</a>
+                                    <a class="dropdown-item" href="../{{4}}/deskripsi">Tugas Pokok dan fungsi</a>
+                                    <a class="dropdown-item" href="../{{6}}/deskripsi">Struktur Organisasi</a>
+                                    <a class="dropdown-item" href="../{{7}}/deskripsi">Profil Pejabat</a>
+                                    <a class="dropdown-item" href="../{{8}}/deskripsi">Sambutan</a>
+                                    <a class="dropdown-item" href="../{{9}}/deskripsi">Prestasi Kecamatan</a>
+                                </div>
+                            </li>
+                            <li class="nav-item active dropdown" id="ygborder">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pelayanan
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="../{{10}}/deskripsi">Penerbitan E-KTP</a>
+                                    <a class="dropdown-item" href="../{{11}}/deskripsi">Penerbitan Kartu Keluarga</a>
+                                    <a class="dropdown-item" href="../{{12}}/deskripsi">Permohonan Surat Pindah</a>
+                                    <a class="dropdown-item" href="../{{13}}/deskripsi">Pengesahan SKDU dan Yayasan </a>
+                                    <a class="dropdown-item" href="../{{14}}/deskripsi">Pengesahan SKCK</a>
+                                    <a class="dropdown-item" href="../{{15}}/deskripsi">Pengesahan Surat Pernyataan Waris</a>
+                                    <a class="dropdown-item" href="../{{16}}/deskripsi">Permohonan Surat Dispensasi Pernikahan</a>
+                                    <a class="dropdown-item" href="../{{17}}/deskripsi">Pengesahan SKTM</a>
+                                    <a class="dropdown-item" href="../{{18}}/deskripsi">Penerbitan Akta Jual Beli/Hibah/Pembagian Hak</a>
+                                </div>
+                            </li>
+                            <li class="nav-item active dropdown" id="ygborder">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Kelurahan
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="../{{'Kelurahan Setu'}}/kelurahan">Kelurahan Setu</a>
+                                    <a class="dropdown-item" href="../{{'Kelurahan Keranggan'}}/kelurahan">Kelurahan Keranggan</a>
+                                    <a class="dropdown-item" href="../{{'Kelurahan Muncul'}}/kelurahan">Kelurahan Muncul</a>
+                                    <a class="dropdown-item" href="../{{'Kelurahan Babakan'}}/kelurahan">Kelurahan Babakan</a>
+                                    <a class="dropdown-item" href="../{{'Kelurahan Bakti Jaya'}}/kelurahan">Kelurahan Bakti Jaya</a>
+                                    <a class="dropdown-item" href="../{{'Kelurahan Kademangan'}}/kelurahan">Kelurahan Kademangan</a>
+                                </div>
+                            </li>
+                            <li class="nav-item active dropdown" id="ygborder">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Produk Hukum
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/perda">Peraturan Daerah</a>
+                                    <a class="dropdown-item" href="/perwal">Peraturan Walikota</a>
+                                    <a class="dropdown-item" href="/kepwal">Keputusan Walikota</a>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="../beritakecamatan" id="ygborder">Berita Kecamatan</a>
+                            </li>
+                            <li class="nav-item active dropdown" id="ygborder">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Gallery
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/gambargallery">Album Foto</a>
+                                    <a class="dropdown-item" href="/videogallery">Album Video</a>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/formpengaduan" id="ygborder">Pengaduan</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://e-ppid.tangerangselatankota.go.id/" id="ygborder">Informasi Publik</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link text-warning font-weight-bold" href="../login" id="ygborder">BACK END</a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
             </div>
 
-            {{-- <div class="row sticky-top" id="headerlayer3">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>
-            </div> --}}
+           
         <!-- Akhir Header =====================================================================================-->
 
 
         <!-- Mini Header =====================================================================================-->
             <div class="row mt-1">
                 <div class="col-fluid shadow-md p-1" id="miniheader1">
-                    <h6 id="hntext">HEADLINE NEWS</h6>
+                    <h6 class="animate__animated animate__pulse animate__infinite infinite" id="hntext">HEADLINE NEWS</h6>
                 </div>
 
                 <div class="col-fluid shadow-md p-1 bg-light" id="miniheader2">
@@ -221,182 +342,14 @@
             <div class="row bg-light p-3 mt-1">
 
                 {{-- konten kiri --}}
-                <div class="col-md-8">
-
-
+                <div class="col-md-8 mb-4">
+                    <link rel="shortcut icon" type="image/jpg" href="img/icon/lambang.png"/>
+                    
                     @yield('content')
 
-                    {{-- <div class="bg-white rounded" id="contentkiri">
-                        
-                    </div> --}}
+                    {{-- <div class="bg-white rounded" id="contentkiri"> </div> --}}
 
 
-                    <div class="row">
-                        {{-- <div class="jumbotron" id="beritajumbotron">  --}}
-                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img src="/img/1.jpg" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block rounded" id="judulberitajumbotron">
-                                      <h5>First slide label</h5>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="/img/bg.png" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block" id="judulberitajumbotron">
-                                      <h5>Second slide label</h5>
-                                    </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="/img/bi.jpeg" class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block" id="judulberitajumbotron">
-                                      <h5>Third slide label</h5>
-                                    </div>
-                                  </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
-                                </a>
-                              </div>
-                        {{-- </div> --}}
-                    </div>
-                
-                    <div class="row mb-4">
-                        <div class="col-sm-12">
-                            <h6 id="judulkonten" style="font-size: 22px">BERITA</h6> 
-                            <div class="bg-white rounded" id="contentkiri">
-
-                                <div class="row">
-                                
-                                    <div class="col-sm-6" style="padding:10px;">
-                                        
-                                        <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex" style="width: 90%; margin-left: 20px;">
-                                        <h5 id="judulgambarberitaindex">Pelaku UMKM di Tangsel Harus Manfaatkan Teknologi</h5>
-                                        <h6 id="tanggalgambarberitaindex">30 juli 2020, 14:35:36</h6>
-                                        <p id="tulisannormal">Pelaku UMKM di Tangsel Harus Manfaatkan Teknologi...</p>
-                                        <div class="readmore"><a href="" id="tulisannormal" style="color: black">Read More >></a></div>
-
-                                    </div>
-                                    
-                                    <div class="col-sm-6">
-                                    
-                                        <div class="row pt-2" style="box-shadow: rgb(181, 181, 181) 0px 0px 4px 0px; background-color:#F7F7F7; width:99.5%; margin-left:1px;">
-
-                                            <div class="col-sm-4">
-                                                <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex">
-                                                <p class="text-center" style="font-size:11px; color:#B3B3B3;">05 Agustus 2021</p>
-                                            </div>
-                                            
-                                            <div class="col-sm-8 pt-1">
-                                                <p style="font-size:14px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
-                                            </div>
-                                            
-                                        </div>
-
-                                        {{-- perulangan 1--}}
-                                        <div class="row pt-2" style="box-shadow: rgb(181, 181, 181) 0px 0px 4px 0px; background-color:#F7F7F7; width:99.5%; margin-left:1px;">
-
-                                            <div class="col-sm-4">
-                                                <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex">
-                                                <p class="text-center" style="font-size:11px; color:#B3B3B3;">05 Agustus 2021</p>
-                                            </div>
-                                            
-                                            <div class="col-sm-8 pt-1">
-                                                <p style="font-size:14px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
-                                            </div>
-                                            
-                                        </div>
-                                        {{-- perulangan 2--}}
-                                        <div class="row pt-2" style="box-shadow: rgb(181, 181, 181) 0px 0px 4px 0px; background-color:#F7F7F7; width:99.5%; margin-left:1px;">
-
-                                            <div class="col-sm-4">
-                                                <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex">
-                                                <p class="text-center" style="font-size:11px; color:#B3B3B3;">05 Agustus 2021</p>
-                                            </div>
-                                            
-                                            <div class="col-sm-8 pt-1">
-                                                <p style="font-size:14px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
-                                            </div>
-                                            
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>     
-                        </div>
-                    </div>
-                
-                    <div class="row mb-4">
-                        <div class="col-sm-6">
-                            <h6 id="judulkonten" style="font-size: 22px">KEGIATAN</h6>
-                            <div class="bg-white rounded" id="contentkiri" style="padding:15px; padding-bottom:-10px;">
-                                    
-                                
-                                <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex">
-                                <h5 id="judulgambarberitaindex">Pelaku UMKM di Tangsel Harus Manfaatkan Teknologi</h5>
-                                <h6 id="tanggalgambarberitaindex">30 juli 2020, 14:35:36</h6>
-                                <p id="tulisannormal">Pelaku UMKM di Tangsel Harus Manfaatkan Teknologi...</p>
-                                <div class="readmore mb-3"><a href="" id="tulisannormal" style="color: black;">Read More >></a></div>
-
-                                <div class="row pt-2" style="background-color:#F7F7F7; width:111%; box-shadow: 0 0 5px #cacaca;">
-
-                                    <div class="col-sm-4">
-                                        <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex">
-                                        <p class="text-center" style="font-size:11px; color:#B3B3B3;">05 Agustus 2021</p>
-                                    </div>
-                                    
-                                    <div class="col-sm-8 pt-1">
-                                        <p style="font-size:14px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
-                                    </div>
-                                    
-                                </div>
-                                <div class="row pt-2" style="background-color:#F7F7F7; width:111%; box-shadow: 0 0 5px #cacaca;">
-
-                                    <div class="col-sm-4">
-                                        <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex">
-                                        <p class="text-center" style="font-size:11px; color:#B3B3B3;">05 Agustus 2021</p>
-                                    </div>
-                                    
-                                    <div class="col-sm-8 pt-1">
-                                        <p style="font-size:14px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-sm-6">
-                            <h6 id="judulkonten" style="font-size: 22px">ARTIKEL</h6>
-                            <div class="bg-white rounded" id="contentkiri" style="padding:10px;">
-                                <img src="/img/baru1.PNG" alt="error" id="gambarberitaindex" >
-                                <h5 id="judulgambarberitaindex">Pelaku UMKM di Tangsel Harus Manfaatkan Teknologi</h5>
-                                <h6 id="tanggalgambarberitaindex">30 juli 2020, 14:35:36</h6>
-                                <p id="tulisannormal">Pelaku UMKM di Tangsel Harus Manfaatkan Teknologi...</p>
-                                <div class="readmore"><a href="" id="tulisannormal" style="color: black">Read More >></a></div>
-
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="row mb-4">
-                        <div class="col-sm-12">
-                            <h6 id="judulkonten" style="font-size: 22px">GALERI PHOTO</h6> 
-                            <div class="bg-white rounded" id="contentkiri" style="padding: 15px;">
-                                <a href=""><img src="/img/bg.png" alt="" style="width:130px;"></a>
-                            </div>     
-                        </div>
-                    </div>
-            
                 </div>  
                 {{-- akhir konten kiri --}}
 
@@ -415,46 +368,25 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active pt-3" id="baru" role="tabpanel" aria-labelledby="baru-tab">
                                 
-                                <div class="row mb-3">
+                                @foreach ($bacaan as $key => $item)
 
-<<<<<<< HEAD
-                                    <div class="col-sm-6">
-                                        <img src="/img/baru1.PNG" alt="error" id="gambartabbaru">
-                                    </div>
-                                    
-                                    <div class="col-sm-6 pt-1">
-                                        <p style="font-size:13px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
-                                        <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">05 Agustus 2021</p>
-=======
                                     <div class="row mt-1 mb-2" >
                                         <div class="col-5">
                                             {{-- @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars) --}}
                                             <a href="../{{$item->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru"></a>
                                             {{-- @endforeach --}}
                                         </div>
-                                        
+
                                         <div class="col-7">
-                                            <a href="../{{$item->id}}/isibacaan"><p style="font-size:13px; font-weight:400px; line-height:15px; color:black;">{{$item->judul}}</p></a>
+                                            <a href="../{{$item->id}}/isibacaan"><p id="judulBerita">{{$item->judul}}</p></a>
                                             <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->created_at}}</p>
                                         </div>
                                         
->>>>>>> tanparelasi
-                                    </div>
-                                    
-                                </div>
-                                {{-- akan perulangan --}}
-                                <div class="row mb-3">
+                                        <hr size="10px"/>
 
-                                    <div class="col-sm-6">
-                                        <img src="/img/baru1.PNG" alt="error" id="gambartabbaru">
                                     </div>
-                                    
-                                    <div class="col-sm-6 pt-1">
-                                        <p style="font-size:13px; font-weight:400px; line-height:15px;";>Pemkot Tangsel Memperingati hari 17 agustus</p>
-                                        <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">05 Agustus 2021</p>
-                                    </div>
-                                    
-                                </div>
+
+                                @endforeach
 
                                 <a href="/beritakecamatan"><p style="font-size:12px; margin-top: 15px; color:#B3B3B3;">Tampilkan semua >></p></a>
 
@@ -467,9 +399,6 @@
                         </div>
                     </div>
 
-<<<<<<< HEAD
-                    <h6 id="judulkonten">VIDEO</h6> 
-=======
                     <div class="row">
                         <div class="col-2">
                             <h6 id="judulkonten">VIDEO</h6>
@@ -480,7 +409,6 @@
                     </div>
 
                     
->>>>>>> tanparelasi
                     <div class="bg-white rounded mb-4 p-2 text-center" id="contentkanan">
                         @foreach ($videogallery as $item)
                             <iframe class="embed-responsive-item mb-1" style="width: 100%;" src="{{$item->video}}" frameborder="0" allowfullscreen></iframe>
@@ -489,8 +417,6 @@
                     
 
                     <div class="rounded mb-4" id="gambarkanan">
-<<<<<<< HEAD
-=======
                         <img id="myImg" src="/img/gambar.PNG" alt="Pengaduan Tangsel" style="width:100%; height:100%;">
 
                         <!-- The Modal -->
@@ -508,25 +434,24 @@
                         <div class="col-6" id="lokasipatern">
                             <div class="patern"></div>
                         </div>
->>>>>>> tanparelasi
                     </div>
 
-                    <h6 id="judulkonten">SOSIAL MEDIA</h6>
                     <div class="bg-white rounded mb-4 p-2 text-center" id="contentkanan">
-<<<<<<< HEAD
-                        <img src="/img/icon/youtube.png" alt="iconyoutube" id="iconsm">
-                        <img src="/img/icon/facebook.png" alt="iconfacebook" id="iconsm">
-                        <img src="/img/icon/twitter.png" alt="icontwitter" id="iconsm">
-                        <img src="/img/icon/instagram.png" alt="iconinstagram" id="iconsm">
-=======
                         <a href="https://www.youtube.com/channel/UCiv-tVNor79V-nnRDp-fRqQ"><img src="/img/icon/youtube.png" alt="iconyoutube" id="iconsm"></a>
                         <a href="https://www.facebook.com/HumasTangsel/"><img src="/img/icon/facebook.png" alt="iconfacebook" id="iconsm"></a>
                         <a href="https://twitter.com/humastangsel/"><img src="/img/icon/twitter.png" alt="icontwitter" id="iconsm"></a>
                         <a href="https://www.instagram.com/humaskotatangsel/"><img src="/img/icon/instagram.png" alt="iconinstagram" id="iconsm"></a>
->>>>>>> tanparelasi
                     </div>
 
-                    <h6 id="judulkonten">TAUTAN</h6>
+                    <div class="row">
+                        <div class="col-2">
+                            <h6 id="judulkonten">TAUTAN</h6>
+                        </div>
+                        <div class="col-10" id="lokasipatern">
+                            <div class="patern"></div>
+                        </div>
+                    </div>
+                    
                     <div class="bg-white rounded mb-4 text-center" id="contentkanan">
                         <a href="https://www.tangerangselatankota.go.id/"><img src="/img/tautan1.PNG" style="width: 100%; border-bottom: 1px solid;" alt=""></a>
                         <a href="https://bantenprov.go.id/"><img src="/img/tautan2.PNG" style="width: 100%; border-bottom: 1px solid; padding-bottom: 5px;" alt=""></a>
@@ -542,32 +467,33 @@
 
         {{-- Footer =====================================================================================--}}
             <div class="row mt-2 pt-3 pl-2 pr-2" id="footer1">
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <h5 id="judulfooter">TAG TERKAIT</h5>
                     <div class="isikontenfooter">
-                        <button id="btntagbawah">Berita</button>
-                        <button id="btntagbawah">Kegiatan</button>
-                        <button id="btntagbawah">Artikel</button>
+                        <a href="../tags/{{'berita'}}"><button id="btntagbawah">Berita</button></a>
+                        <a href="../tags/{{'kegiatan'}}"><button id="btntagbawah">Kegiatan</button></a>
+                        <a href="../tags/{{'artikel'}}"><button id="btntagbawah">Artikel</button></a>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <h5 id="judulfooter">TAUTAN</h5>
                     <div class="isikontenfooter">
-                        <a href=""><p class="text-light" id="tautanfooter">Pengaduan Masyarakat</p></a>
-                        <a href=""><p class="text-light" id="tautanfooter">Website Tangerang Selatan</p></a>
-                        <a href=""><p class="text-light" id="tautanfooter">Disdukcapil</p></a>
-                        <a href=""><p class="text-light" id="tautanfooter">Dinas Pendidikan Dan Kebudayaan</p></a>
-                        <a href=""><p class="text-light" id="tautanfooter">DPMPTSP</p></a>
-                        <a href=""><p class="text-light" id="tautanfooter">Polres Tangsel</p></a>
-                        <a href=""><p class="text-light" id="tautanfooter">Diskominfo</p></a>
+                        <a href="https://siaran.tangerangselatankota.go.id/report"><p class="text-light" id="tautanfooter">Pengaduan Masyarakat</p></a>
+                        <a href="https://tangerangselatankota.go.id/"><p class="text-light" id="tautanfooter">Website Tangerang Selatan</p></a>
+                        <a href="https://disdukcapil.tangerangselatankota.go.id/"><p class="text-light" id="tautanfooter">Disdukcapil</p></a>
+                        <a href="https://dikbud.tangerangselatankota.go.id/"><p class="text-light" id="tautanfooter">Dinas Pendidikan Dan Kebudayaan</p></a>
+                        <a href="https://dpmptsp.tangerangselatankota.go.id/"><p class="text-light" id="tautanfooter">DPMPTSP</p></a>
+                        <a href="https://restangsel.id/"><p class="text-light" id="tautanfooter">Polres Tangsel</p></a>
+                        <a href="https://diskominfo.tangerangselatankota.go.id/"><p class="text-light" id="tautanfooter">Diskominfo</p></a>
                     </div>
                     
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <h5 id="judulfooter">ALAMAT KECAMATAN SETU</h5>
 
                     <div class="isikontenfooter">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.049068149776!2d106.673745!3d-6.3276!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xde6d034bf745a26c!2sKantor%20Camat%20Setu%20Tangerang%20Selatan!5e0!3m2!1sid!2sid!4v1617548183617!5m2!1sid!2sid" width="100%" height="145" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <br><br>
                         <p class="text-light" id="aks">Alamat : <br>
                             Jl. Raya Puspitek, Setu, Kota Tangerang Selatan, Banten 15314</p>
                         <p class="text-light" id="aks">No Telp : (021) 75791444
@@ -602,11 +528,28 @@
     {{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> --}}
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    
+        
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
   </body>
 </html>

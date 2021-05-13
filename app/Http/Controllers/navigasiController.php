@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-=======
 use App\models\perda;
 use App\models\perwal;
 use App\models\kepwal;
@@ -14,16 +12,12 @@ use App\models\gambargallery;
 use App\models\videogallery;
 use App\models\deskripsi;
 use App\models\pengaduan;
->>>>>>> tanparelasi
+use App\models\iplihat;
+use App\models\banyaklihat;
 use Illuminate\Http\Request;
 
 class navigasiController extends Controller
 {
-<<<<<<< HEAD
-    function index(){
-        return view('/layouts/main');
-    }
-=======
     public function index(){
 
         // $bacaan = bacaan::with('gambar_bacaan')->orderBy('id', 'desc')->paginate();
@@ -69,16 +63,39 @@ class navigasiController extends Controller
         return view('konten.deskripsi',compact('deskripsi','bacaan','videogallery'));
     }
 
-    public function isibacaan($id, Request $request){
+    public function isibacaan(Request $request, $id){
         $bacaandetail = bacaan::find($id); 
+        $banyaklihat = banyaklihat::where('id',$id)->first();
+        // dd($banyaklihat);
+
         $ip  = $request->ip(); //panggil ip
-        dd($ip);
+        
+        // $cekip = iplihat::where('ip',$ip)->first(); //cek ip apakah ada di database
+
+        // dd($cekip);
+
+        $cekbacaan = iplihat::where('ip',$ip)->where('idbacaan',$id)->first();
+
+        //kalau ga ada ipnya
+        if($cekbacaan == null){ 
+
+            $iplihat = new iplihat; 
+            $iplihat->idbacaan = $id;   
+            $iplihat->ip = $ip;
+            $iplihat->save();
+
+            $temukan = banyaklihat::where('id',$id)->first();
+            $temukan->dilihat = $temukan->dilihat + 1;
+            $temukan->save();
+
+            // dd($temukan);
+        }
+        
         
         $bacaan = bacaan::orderBy('id', 'desc')->paginate(4);
         $videogallery = videogallery::all();
-        // $gambar_bacaan = gambar_bacaan::find($id);
-        // dd($bacaan);
-        return view('konten.bacaan',compact('bacaandetail','bacaan','videogallery'));
+
+        return view('konten.bacaan',compact('bacaandetail','bacaan','videogallery','banyaklihat'));
     }
 
     public function profilkelurahan($nama)
@@ -198,5 +215,4 @@ class navigasiController extends Controller
         // dd($bacaan);
         return view('konten.tags',compact('bacaan','tags','videogallery'));
     }
->>>>>>> tanparelasi
 }

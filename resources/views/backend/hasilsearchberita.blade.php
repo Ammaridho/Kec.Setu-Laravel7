@@ -31,9 +31,9 @@
               <img src="/img/gambar_bacaan/{{$a->gambar}}" alt="error" id="gambartabbaru" style="height: 125px;display: block; margin-left: auto; margin-right: auto;">
               
               <br>
-              <pre style=" height: 50px; font-size: 13px; border:0px; white-space: pre-wrap;" disabled>{{$a->isi}}</pre style="width: 100%; height: 400px;">
-    
-
+              <?php
+                echo htmlspecialchars_decode(stripslashes($a->isi));
+              ?>
               <div class="row">
                 <div class="col-2">
                   {{-- button lihat --}}

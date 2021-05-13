@@ -111,5 +111,7 @@ return [
     |
     */
     'attributes' => [
+        'name' => 'ID',
+        'tlp' => 'no telp'
     ],
 ];

@@ -2,7 +2,8 @@ body{
     background-image: url("/img/bi.jpeg");
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 100% 100%;
     font-family: Arial;
 }
 
@@ -19,13 +20,12 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-#navigasi{
-    margin-left: 10px;
-    margin-top: 10px;
+#isiindex{
+    width: 100px;
 }
 
-#isiindex{
-    margin-left: -20px;
+#navigasi{
+    margin-top: 10px;
 }
 
 #beranda{
@@ -37,3 +37,20 @@ body{
     padding: 20px;
     background-color: antiquewhite;
 }
+
+/* Respondsive ===================================================================================== */
+
+@media (max-width: 766px) {
+   
+}
+
+@media (min-width: 766px) {
+    
+}
+
+@media (min-width: 1045px) {
+    
+}
+
+
+/* Akhir Respondsive ================================================================================= */

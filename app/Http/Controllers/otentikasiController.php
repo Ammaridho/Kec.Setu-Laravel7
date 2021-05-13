@@ -23,7 +23,7 @@ class otentikasiController extends Controller
         ]);
 
 
-        $data = User::where('name',$request->name)->firstOrFail(); ////kalau data Id salah maka (Not Found), maka harus data yang benar
+        $data = User::where('name',$request->name)->first(); ////kalau data Id salah maka (Not Found), maka harus data yang benar
         if($data){
             if(\Hash::check($request->password,$data->password)){ //pengecekan apakah nilai sama
                 session(['berhasil_login' => true]); //aktifkan session

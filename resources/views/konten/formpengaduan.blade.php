@@ -30,50 +30,50 @@
         @csrf
 
         <div class="form-group mb-4">
-            <label for="exampleFormControlInput1">Nama *</label>
+            <label for="exampleFormControlInput1" style="font-size: 14px">Nama *</label>
             @error('nama')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror 
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nama">
         </div>
         <div class="form-group mb-4">
-            <label for="exampleFormControlInput1">No Telp *</label>
+            <label for="exampleFormControlInput1" style="font-size: 14px">No Telp *</label>
             @error('tlp')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror 
             <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="" name="tlp">
         </div>
         <div class="form-group mb-4">
-            <label for="exampleFormControlInput1">Email *</label>
+            <label for="exampleFormControlInput1" style="font-size: 14px">Email *</label>
             @error('email')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror 
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" name="email">
         </div>
         <div class="form-group mb-4">
-            <label for="exampleFormControlInput1">Alamat *</label>
+            <label for="exampleFormControlInput1" style="font-size: 14px">Alamat *</label>
             @error('alamat')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror 
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="alamat">
         </div>
         <div class="form-group mb-4">
-            <label for="exampleFormControlInput1">Perihal *</label>
+            <label for="exampleFormControlInput1" style="font-size: 14px">Perihal *</label>
             @error('perihal')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror 
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="perihal">
         </div>
         <div class="form-group mt-3">
-        <label for="exampleFormControlTextarea1">Deskripsi *</label>
+        <label for="exampleFormControlTextarea1" style="font-size: 14px">Deskripsi *</label>
             @error('deskripsi')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror 
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"></textarea>
         </div>
-        <button class="btn btn-submit text-light bg-success float-right mt-4" type="submit">Simpan</button>
+        <button class="btn btn-submit text-light float-right mt-3" type="submit" style="font-size: 15px; background-color: rgb(24, 204, 168);">Kirim</button>
     </form>
-    <a href="../"><button class="btn text-light bg-success mt-3 ml-5 mb-5">Kembali</button></a>
+    <a href="../"><button class="btn text-light mt-3 ml-5 mt-3 mb-3" style="font-size: 15px; background-color: rgb(236, 181, 0);">Kembali</button></a>
 
 </div>
 

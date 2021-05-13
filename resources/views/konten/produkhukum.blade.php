@@ -1,12 +1,20 @@
 @extends('layouts.main')
 
 @section('content')
+
+    <style>
+        #judulisikonten{
+            font-family: 'BebasNeueRegular';
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
     
 <div class="container bg-white rounded pl-3" id="contentkiri"> 
 
     <div class="row">
             <div class="col-sm-12 mt-3">
-                <h4 id="judulBerita">DOWNLOAD PERATURAN {{$namaaturan}}</h4>
+                <h3 id="judulisikonten">DOWNLOAD {{$namaaturan}}</h3>
             </div>
         </div>
 

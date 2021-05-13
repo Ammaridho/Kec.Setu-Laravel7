@@ -1,12 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-    
-<div class="container bg-white rounded pl-3" id="contentkiri"> 
+    <head>
+        <link rel="shortcut icon" type="image/jpg" href="/img/icon/lambang.png"/>
 
-    <div class="row">
+        <style>
+            #judulisikonten{
+            font-family: 'BebasNeueRegular';
+            font-weight: bold;
+            text-align: center;
+        }
+        </style>
+    </head>
+        
+    <div class="container bg-white rounded pl-3" id="contentkiri"> 
+
+        <div class="row">
             <div class="col-sm-12 mt-3">
-                <h4 id="judulBerita">{{$kelurahan->nama}}</h4>
+                <h3 id="judulisikonten">{{$kelurahan->nama}}</h3>
             </div>
         </div>
 
