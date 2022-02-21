@@ -146,6 +146,7 @@ cursor: pointer;
   }
   #ukurangambarjumbotron{
       height:230px;
+      width: 100%;
   }
   #carouselExampleCaptions{
     height:250px;
@@ -163,7 +164,7 @@ cursor: pointer;
   }
   #ukurangambarjumbotron{
     height:230px;
-    width: 1000px;
+    width: 100%;
   }
   #carouselExampleCaptions{
     height:230px; 
@@ -193,11 +194,12 @@ cursor: pointer;
   }
   #ukurangambarjumbotron{
     height:270px;
+    width: 490px;
   }
   #carouselExampleCaptions{
     height:270px; 
-    
   }
+  
   #tulisanjumbotron {
     font-size: 13px;
     padding-bottom: -100px;
@@ -219,6 +221,7 @@ cursor: pointer;
   }
   #ukurangambarjumbotron{
     height:360px;
+    width: 675px;
   }
   #carouselExampleCaptions{
     height:360px; 

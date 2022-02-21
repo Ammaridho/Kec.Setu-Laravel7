@@ -303,7 +303,7 @@ margin-top: -3px;
 
 #gambartabbaru{
     width: 100%;
-    height: 125px;
+    /* height: 125px; */
     padding: 2px 2px 2px 2px;
     box-shadow: rgb(181, 181, 181) 0px 0px 2px 0px;
 }

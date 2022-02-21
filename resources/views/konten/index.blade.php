@@ -22,7 +22,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <a href="../{{$bacaan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[0]->gambar}}" class="d-block w-100" alt="..."  id="ukurangambarjumbotron"></a>
+                    <a href="../{{$bacaan[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[0]->gambar}}" class="d-block" alt="..."  id="ukurangambarjumbotron"></a>
                     <div class="carousel-caption rounded" id="judulberitajumbotron">
                         <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan" style="text-decoration: none;"id="tulisanjumbotron">{{$bacaan[0]->judul}}</a>
                     </div>
@@ -30,7 +30,7 @@
 
                 @for ($i = 1; $i < 3; $i++)
                 <div class="carousel-item">
-                    <a class="text-dark" href="../{{$bacaan[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[$i]->gambar}}" class="d-block w-100" alt="..."  id="ukurangambarjumbotron"></a>
+                    <a class="text-dark" href="../{{$bacaan[$i]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$bacaan[$i]->gambar}}" class="d-block" alt="..."  id="ukurangambarjumbotron"></a>
                     <div class="carousel-caption rounded" id="judulberitajumbotron">
                         <a class="text-dark" href="../{{$bacaan[0]->id}}/isibacaan" style="text-decoration: none;" id="tulisanjumbotron">{{$bacaan[$i]->judul}}</a>
                     </div>
@@ -190,6 +190,10 @@
                 </div>
             </div>
             <div class="bg-white rounded" id="contentkiri" style="padding:15px; padding-bottom:-10px;">
+
+
+                {{-- melakukan pencetakan data pertama dengan index 0 --}}
+
                 <a class="text-dark" href="../{{$artikel[0]->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$artikel[0]->gambar}}" alt="error" id="gambarberitaindex"></a>
                 <a class="text-dark" href="../{{$artikel[0]->id}}/isibacaan"><h5 id="judulgambarberitaindex">{{$artikel[0]->judul}}</h5></a>
                 
@@ -204,6 +208,9 @@
                 <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$artikel[0]->isi)),0,250)}}..</p>
                 <div class="readmore"><a href="../{{$artikel[0]->id}}/isibacaan" id="tulisannormal" style="color: black">Read More >></a></div>
 
+                {{-- melakukan pencetakan selanjutnya dengan for dari index 1 sampai sebanyak jumlahnya --}}
+                
+                {{-- bagaimana kalau ini menggunakan foreach? --}}
                 @for ($i = 1; $i < count($artikel); $i++)
 
                     <div class="row pt-2 mt-2" style="background-color:#F7F7F7; box-shadow: 0 0 5px #cacaca;">

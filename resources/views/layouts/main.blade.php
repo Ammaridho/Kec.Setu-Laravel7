@@ -17,6 +17,8 @@
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     
+    <script src="js/jquery-3.6.0.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
@@ -184,7 +186,7 @@
                 </div>
 
                 <div class="col-5">
-                    <h6 class="text-right" style="line-height: 30px; font-family:Fantasy;" id="watermark">Re-built By Ammaridho</h6>
+                    <h6 class="text-right" style="line-height: 30px; font-family:Fantasy; font-size:11px;" id="watermark">Re-built By Ammaridho</h6>
                 </div>
 
 
@@ -371,13 +373,13 @@
                                 @foreach ($bacaan as $key => $item)
 
                                     <div class="row mt-1 mb-2" >
-                                        <div class="col-5">
+                                        <div class="col-sm-5">
                                             {{-- @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars) --}}
                                             <a href="../{{$item->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru"></a>
                                             {{-- @endforeach --}}
                                         </div>
 
-                                        <div class="col-7">
+                                        <div class="col-sm-7">
                                             <a href="../{{$item->id}}/isibacaan"><p id="judulBerita">{{$item->judul}}</p></a>
                                             <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->created_at}}</p>
                                         </div>
