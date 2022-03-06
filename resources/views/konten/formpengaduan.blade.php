@@ -25,7 +25,7 @@
     @endif --}}
 
 
-    <form class="ml-5 mr-5" action="../" method="POST"> 
+    <form class="ml-5 mr-5" action="/" method="POST"> 
 
         @csrf
 
@@ -73,7 +73,7 @@
         </div>
         <button class="btn btn-submit text-light float-right mt-3" type="submit" style="font-size: 15px; background-color: rgb(24, 204, 168);">Kirim</button>
     </form>
-    <a href="../"><button class="btn text-light mt-3 ml-5 mt-3 mb-3" style="font-size: 15px; background-color: rgb(236, 181, 0);">Kembali</button></a>
+    <a href="/"><button class="btn text-light mt-3 ml-5 mt-3 mb-3" style="font-size: 15px; background-color: rgb(236, 181, 0);">Kembali</button></a>
 
 </div>
 

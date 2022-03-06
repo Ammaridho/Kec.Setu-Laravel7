@@ -17,7 +17,7 @@
          
         @if ($gambargallery == null)
 
-        <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="../../gambargallery/input/store/" method="POST" enctype="multipart/form-data">
+        <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="/gambargallery/input/store/" method="POST" enctype="multipart/form-data">
         
             @csrf    
 
@@ -35,7 +35,7 @@
         
         @else
             
-        <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="../../gambargallery/input/store/{{$gambargallery->id}}" method="POST" enctype="multipart/form-data">
+        <form class="ml-5 mr-5 text-light pt-3 pl-4 pr-4 pb-2 bg-dark rounded" action="/gambargallery/input/store/{{$gambargallery->id}}" method="POST" enctype="multipart/form-data">
         
             @csrf
 

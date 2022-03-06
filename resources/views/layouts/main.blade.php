@@ -233,13 +233,13 @@
                                     Profile
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="../{{2}}/deskripsi">Sekilas Kecamatan</a>
-                                    <a class="dropdown-item" href="../{{3}}/deskripsi">Visi dan Misi</a>
-                                    <a class="dropdown-item" href="../{{4}}/deskripsi">Tugas Pokok dan fungsi</a>
-                                    <a class="dropdown-item" href="../{{6}}/deskripsi">Struktur Organisasi</a>
-                                    <a class="dropdown-item" href="../{{7}}/deskripsi">Profil Pejabat</a>
-                                    <a class="dropdown-item" href="../{{8}}/deskripsi">Sambutan</a>
-                                    <a class="dropdown-item" href="../{{9}}/deskripsi">Prestasi Kecamatan</a>
+                                    <a class="dropdown-item" href="/{{2}}/deskripsi">Sekilas Kecamatan</a>
+                                    <a class="dropdown-item" href="/{{3}}/deskripsi">Visi dan Misi</a>
+                                    <a class="dropdown-item" href="/{{4}}/deskripsi">Tugas Pokok dan fungsi</a>
+                                    <a class="dropdown-item" href="/{{6}}/deskripsi">Struktur Organisasi</a>
+                                    <a class="dropdown-item" href="/{{7}}/deskripsi">Profil Pejabat</a>
+                                    <a class="dropdown-item" href="/{{8}}/deskripsi">Sambutan</a>
+                                    <a class="dropdown-item" href="/{{9}}/deskripsi">Prestasi Kecamatan</a>
                                 </div>
                             </li>
                             <li class="nav-item active dropdown" id="ygborder">
@@ -247,15 +247,15 @@
                                     Pelayanan
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="../{{10}}/deskripsi">Penerbitan E-KTP</a>
-                                    <a class="dropdown-item" href="../{{11}}/deskripsi">Penerbitan Kartu Keluarga</a>
-                                    <a class="dropdown-item" href="../{{12}}/deskripsi">Permohonan Surat Pindah</a>
-                                    <a class="dropdown-item" href="../{{13}}/deskripsi">Pengesahan SKDU dan Yayasan </a>
-                                    <a class="dropdown-item" href="../{{14}}/deskripsi">Pengesahan SKCK</a>
-                                    <a class="dropdown-item" href="../{{15}}/deskripsi">Pengesahan Surat Pernyataan Waris</a>
-                                    <a class="dropdown-item" href="../{{16}}/deskripsi">Permohonan Surat Dispensasi Pernikahan</a>
-                                    <a class="dropdown-item" href="../{{17}}/deskripsi">Pengesahan SKTM</a>
-                                    <a class="dropdown-item" href="../{{18}}/deskripsi">Penerbitan Akta Jual Beli/Hibah/Pembagian Hak</a>
+                                    <a class="dropdown-item" href="/{{10}}/deskripsi">Penerbitan E-KTP</a>
+                                    <a class="dropdown-item" href="/{{11}}/deskripsi">Penerbitan Kartu Keluarga</a>
+                                    <a class="dropdown-item" href="/{{12}}/deskripsi">Permohonan Surat Pindah</a>
+                                    <a class="dropdown-item" href="/{{13}}/deskripsi">Pengesahan SKDU dan Yayasan </a>
+                                    <a class="dropdown-item" href="/{{14}}/deskripsi">Pengesahan SKCK</a>
+                                    <a class="dropdown-item" href="/{{15}}/deskripsi">Pengesahan Surat Pernyataan Waris</a>
+                                    <a class="dropdown-item" href="/{{16}}/deskripsi">Permohonan Surat Dispensasi Pernikahan</a>
+                                    <a class="dropdown-item" href="/{{17}}/deskripsi">Pengesahan SKTM</a>
+                                    <a class="dropdown-item" href="/{{18}}/deskripsi">Penerbitan Akta Jual Beli/Hibah/Pembagian Hak</a>
                                 </div>
                             </li>
                             <li class="nav-item active dropdown" id="ygborder">
@@ -263,12 +263,12 @@
                                     Kelurahan
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="../{{'Kelurahan Setu'}}/kelurahan">Kelurahan Setu</a>
-                                    <a class="dropdown-item" href="../{{'Kelurahan Keranggan'}}/kelurahan">Kelurahan Keranggan</a>
-                                    <a class="dropdown-item" href="../{{'Kelurahan Muncul'}}/kelurahan">Kelurahan Muncul</a>
-                                    <a class="dropdown-item" href="../{{'Kelurahan Babakan'}}/kelurahan">Kelurahan Babakan</a>
-                                    <a class="dropdown-item" href="../{{'Kelurahan Bakti Jaya'}}/kelurahan">Kelurahan Bakti Jaya</a>
-                                    <a class="dropdown-item" href="../{{'Kelurahan Kademangan'}}/kelurahan">Kelurahan Kademangan</a>
+                                    <a class="dropdown-item" href="/{{'Kelurahan Setu'}}/kelurahan">Kelurahan Setu</a>
+                                    <a class="dropdown-item" href="/{{'Kelurahan Keranggan'}}/kelurahan">Kelurahan Keranggan</a>
+                                    <a class="dropdown-item" href="/{{'Kelurahan Muncul'}}/kelurahan">Kelurahan Muncul</a>
+                                    <a class="dropdown-item" href="/{{'Kelurahan Babakan'}}/kelurahan">Kelurahan Babakan</a>
+                                    <a class="dropdown-item" href="/{{'Kelurahan Bakti Jaya'}}/kelurahan">Kelurahan Bakti Jaya</a>
+                                    <a class="dropdown-item" href="/{{'Kelurahan Kademangan'}}/kelurahan">Kelurahan Kademangan</a>
                                 </div>
                             </li>
                             <li class="nav-item active dropdown" id="ygborder">
@@ -282,7 +282,7 @@
                                 </div>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="../beritakecamatan" id="ygborder">Berita Kecamatan</a>
+                                <a class="nav-link" href="/beritakecamatan" id="ygborder">Berita Kecamatan</a>
                             </li>
                             <li class="nav-item active dropdown" id="ygborder">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -300,7 +300,7 @@
                                 <a class="nav-link" href="https://e-ppid.tangerangselatankota.go.id/" id="ygborder">Informasi Publik</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link text-warning font-weight-bold" href="../login" id="ygborder">BACK END</a>
+                                <a class="nav-link text-warning font-weight-bold" href="/login" id="ygborder">BACK END</a>
                             </li>
                         </ul>
                     </div>
@@ -324,12 +324,12 @@
                         <div class="carousel-inner">
             
                             <div class="carousel-item active">
-                                <a href="../{{$bacaan[0]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[0]->judul}}</p>
+                                <a href="/{{$bacaan[0]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[0]->judul}}</p>
                             </div>
             
                             @for ($i = 1; $i < count($bacaan); $i++)
                                 <div class="carousel-item">
-                                    <a href="../{{$bacaan[$i]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[$i]->judul}}</p></a>
+                                    <a href="/{{$bacaan[$i]->id}}/isibacaan"><p class="wadah-mengetik text-dark" id="isihntext">{{$bacaan[$i]->judul}}</p></a>
                                 </div>
                             @endfor
                             
@@ -375,12 +375,12 @@
                                     <div class="row mt-1 mb-2" >
                                         <div class="col-sm-5">
                                             {{-- @foreach ($gambar_bacaan->where('id',(int)$key+1)->take(1) as $gambars) --}}
-                                            <a href="../{{$item->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru"></a>
+                                            <a href="/{{$item->id}}/isibacaan"><img src="/img/gambar_bacaan/{{$item->gambar}}" alt="error" id="gambartabbaru"></a>
                                             {{-- @endforeach --}}
                                         </div>
 
                                         <div class="col-sm-7">
-                                            <a href="../{{$item->id}}/isibacaan"><p id="judulBerita">{{$item->judul}}</p></a>
+                                            <a href="/{{$item->id}}/isibacaan"><p id="judulBerita">{{$item->judul}}</p></a>
                                             <p style="font-size:11px; margin-top:-12px; color:#B3B3B3;">{{$item->created_at}}</p>
                                         </div>
                                         
@@ -394,9 +394,9 @@
 
                             </div>
                             <div class="tab-pane fade pt-3" id="tags" role="tabpanel" aria-labelledby="tags-tab">
-                                <a href="../tags/{{'berita'}}"><button id="btntag">Berita</button></a>
-                                <a href="../tags/{{'kegiatan'}}"><button id="btntag">Kegiatan</button></a>
-                                <a href="../tags/{{'artikel'}}"><button id="btntag">Artikel</button></a>
+                                <a href="/tags/{{'berita'}}"><button id="btntag">Berita</button></a>
+                                <a href="/tags/{{'kegiatan'}}"><button id="btntag">Kegiatan</button></a>
+                                <a href="/tags/{{'artikel'}}"><button id="btntag">Artikel</button></a>
                             </div>
                         </div>
                     </div>
@@ -472,9 +472,9 @@
                 <div class="col-md-4">
                     <h5 id="judulfooter">TAG TERKAIT</h5>
                     <div class="isikontenfooter">
-                        <a href="../tags/{{'berita'}}"><button id="btntagbawah">Berita</button></a>
-                        <a href="../tags/{{'kegiatan'}}"><button id="btntagbawah">Kegiatan</button></a>
-                        <a href="../tags/{{'artikel'}}"><button id="btntagbawah">Artikel</button></a>
+                        <a href="/tags/{{'berita'}}"><button id="btntagbawah">Berita</button></a>
+                        <a href="/tags/{{'kegiatan'}}"><button id="btntagbawah">Kegiatan</button></a>
+                        <a href="/tags/{{'artikel'}}"><button id="btntagbawah">Artikel</button></a>
                     </div>
                 </div>
                 <div class="col-md-4">

@@ -2,8 +2,6 @@
 
 @section('content')
     <head>
-        <link rel="shortcut icon" type="image/jpg" href="/img/icon/lambang.png"/>
-
         <style>
             #judulisikonten{
             font-family: 'BebasNeueRegular';

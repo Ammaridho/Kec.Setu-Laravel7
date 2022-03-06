@@ -1,10 +1,6 @@
 @extends('layouts.main')
 
-@section('content')
-
-    <head>
-        <link rel="shortcut icon" type="image/jpg" href="/img/icon/lambang.png"/>
-    </head>
+@section('content')    
 
     <div class="bg-white rounded p-4" id="contentkiri">
 

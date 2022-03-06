@@ -33,7 +33,7 @@
         </div>
 
         </form>
-      <a href="../../backendindex"><button class="btn text-light bg-success float-left mt-3 ml-5 mb-3">Kembali</button></a>
+      <a href="/backendindex"><button class="btn text-light bg-success float-left mt-3 ml-5 mb-3">Kembali</button></a>
 
 
 @endsection

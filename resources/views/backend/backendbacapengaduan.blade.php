@@ -2,7 +2,7 @@
 
 @section('backendcontent')
 
-    <a href="../backendindex"><button class="btn text-light bg-success">Kembali</button></a>
+    <a href="/backendindex"><button class="btn text-light bg-success">Kembali</button></a>
     
     <h1 class="text-center mt-3">DETAIL BACAAN</h1>
 

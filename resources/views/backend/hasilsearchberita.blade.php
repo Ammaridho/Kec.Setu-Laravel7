@@ -4,7 +4,7 @@
     <div class="row">
         
         <div class="col-md-4 mt-2">
-            <a href="../backendindex"><button class="btn text-light bg-success">Kembali</button></a>
+            <a href="/backendindex"><button class="btn text-light bg-success">Kembali</button></a>
             
         </div>
         <div class="col-md-8 mt-2" id="lokasipatern">

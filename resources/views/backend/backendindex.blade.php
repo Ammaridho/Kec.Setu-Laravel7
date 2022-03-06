@@ -33,10 +33,10 @@
         <h1 class="text-center mt-3" style="font-size: 150%">DAFTAR BACAAN</h1>
 
         <nav class="navbar">
-          <a href="../backendinputbacaan"><button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light">+</button></a>
+          <a href="/backendinputbacaan"><button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light">+</button></a>
           
           <form class="form-inline" action="/backendsearch/berita" method="get">
-            <input class="form-control" style="width:150px;" type="search" placeholder="Tulis Disini.." aria-label="Search" name="search">
+            <input class="form-control" style="width:150px;" type="search" placeholder="Tulis Disini" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light" type="submit">Cari</button>
           </form>
         </nav>
@@ -64,7 +64,7 @@
                 
                 <br>
                 {{-- <pre style=" height: 50px; font-size: 13px; border:0px; white-space: pre-wrap;" disabled>{{$a->isi}}</pre style="width: 100%; height: 400px;"> --}}
-                  <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$a->isi)),0,250)}}..</p>
+                  <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$a->isi)),0,250)}}</p>
 
                 <div class="row">
                   <div class="col-8">
@@ -101,10 +101,10 @@
         <h1 class="text-center mt-3" style="font-size: 150%">DAFTAR DESKRIPSI</h1>
 
         <nav class="navbar">
-          <a href="../backendinputdeskripsi"><button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light">+</button></a>
+          <a href="/backendinputdeskripsi"><button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light">+</button></a>
           
           <form class="form-inline" action="/backendsearch/deskripsi" method="get">
-            <input class="form-control" style="width:150px;" type="search" placeholder="Tulis Disini.." aria-label="Search" name="search">
+            <input class="form-control" style="width:150px;" type="search" placeholder="Tulis Disini" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light" type="submit">Cari</button>
           </form>
         </nav>
@@ -115,7 +115,7 @@
                 {{-- <h1>aa{{$a->gambar_deskripsi[0]->gambar}}</h1> --}}
                 <h1 style="font-family: BebasNeueRegular; font-size:28px; font-weight:bold; text-align:center;">{{$a->judul}}</h1>
                 
-                <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$a->isi)),0,250)}}..</p>
+                <p id="tulisannormal">{{substr(strip_tags(str_replace(["&nbsp;","&rdquo;","&rsquo;","&hellip;"],' ',$a->isi)),0,250)}}</p>
 
                 <div class="row">
                   <div class="col-8">
@@ -153,7 +153,7 @@
         <nav class="navbar">
           <p class=""></p>
           <form class="form-inline" action="/backendsearch/pengaduan" method="get">
-            <input class="form-control mr-sm-2" style="width:150px;" type="search" placeholder="Tulis Disini.." aria-label="Search" name="search">
+            <input class="form-control mr-sm-2" style="width:150px;" type="search" placeholder="Tulis Disini" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light" type="submit">Cari</button>
           </form>
         </nav>
@@ -204,7 +204,7 @@
         <nav class="navbar">
           <a href="/gambargallery/input"><button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light">+</button></a>
           <form class="form-inline" action="/backendsearch/gambar" method="get">
-            <input class="form-control mr-sm-2" style="width:150px;" type="search" placeholder="Tulis Disini.." aria-label="Search" name="search">
+            <input class="form-control mr-sm-2" style="width:150px;" type="search" placeholder="Tulis Disini" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0 bg-success text-light" type="submit">Cari</button>
           </form>
         </nav>
