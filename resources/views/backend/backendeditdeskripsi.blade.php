@@ -23,7 +23,7 @@
         <x-textfield field="judul" label="Judul" type="text" value="{{$deskripsi->judul}}"/>
 
         <div class="textarea" style="background-color: white; color:black; margin-bottom:30px;" >
-            <textarea id="summernote" name="isi">{{$deskripsi->isi}}</textarea>
+            <textarea class="summernote" name="isi">{{$deskripsi->isi}}</textarea>
         </div>
         
         <center><label>Anda bisa melebarkannya dengan menarik bagian tengah pada kolom isi</label></center>

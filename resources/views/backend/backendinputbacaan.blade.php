@@ -39,13 +39,10 @@
                 <label class="form-check-label" for="inlineRadio3">Artikel</label>
             </div>
         </div>
-    
 
         <x-textfield field="judul" label="Judul" type="text" value=""/>
 
         <x-file field="gambar" label="Gambar" value=""/>
-        
-        {{-- <x-textarea field="isibiasa" label="Isi Biasa" value=""/> --}}
 
         <label for="">Isi</label>
         <div class="textarea" style="background-color: white; color:black; margin-bottom:30px;" >

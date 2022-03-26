@@ -47,11 +47,9 @@
 
         <x-file field="gambar" label="Gambar" value="{{$bacaan->gambar}}"/>
 
-        {{-- <x-textarea field="isibiasa" label="Isi Biasa" value="{{$bacaan->isi}}"/> --}}
-
         <label for="">Isi</label>
         <div class="textarea" style="background-color: white; color:black; margin-bottom:30px;" >
-            <textarea id="summernote" name="isi">{{$bacaan->isi}}</textarea>
+            <textarea class="summernote" name="isi">{{$bacaan->isi}}</textarea>
         </div>
         
         <center><label>Anda bisa melebarkannya dengan menarik bagian tengah pada kolom isi</label></center>

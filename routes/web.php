@@ -90,6 +90,7 @@ Route::group(['middleware' => 'ceksession'], function(){
     //inputbacaan
     Route::get('/backendinputbacaan','backendController@inputbacaan');
     Route::post('/backendinputbacaan/store','backendController@storebackendinputbacaan');
+    Route::post('/backendinputbacaan/storegambarbacaan','backendController@storegambarbacaan');
 
     //edit bacaan
     Route::get('/bacaan/{id}/edit','backendController@editbacaan');

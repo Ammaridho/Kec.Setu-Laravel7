@@ -67,6 +67,20 @@ class backendController extends Controller
         return view('backend/backendinputbacaan');
     }
 
+    public function storegambarbacaan(Request $request)
+    {
+        // dd($request->image);
+        
+        // gambar =================================
+         // membuat nama gambar agar tidak sama
+         $imgName = $request->image->getClientOriginalName() . '-' . time() . '.' . $request->gambar->extension();
+
+        // dd($imgName);
+
+         // memasukkan ke folder
+         $request->image->move(public_path('/img/gambar_isi_bacaan'), $imgName);
+    }
+
     public function storebackendinputbacaan(Request $request)
     {
 
@@ -75,8 +89,7 @@ class backendController extends Controller
             'perihal' => 'required',
             'judul' => 'required|max:100',
             'gambar' => 'required|mimes:jpeg,png,jpg|max:10000',
-            'isi' => 'required',
-            'isibiasa' => 'required'
+            'isi' => 'required'
         ]);
 
         // gambar =================================
@@ -96,7 +109,6 @@ class backendController extends Controller
         $bacaan->gambar = $imgName;
         $bacaan->perihal = $request->perihal;
         $bacaan->isi = $request->isi;
-        $bacaan->isibiasa = $request->isibiasa;
         $bacaan->save();
         
 
@@ -134,11 +146,9 @@ class backendController extends Controller
             'perihal' => 'required',
             'judul' => 'required|max:100',
             'gambar' => 'mimes:jpeg,png,jpg|max:10000',
-            'isi' => 'required',
-            'isibiasa' => 'required'
+            'isi' => 'required'
         ]);
 
-        
         $bacaan = bacaan::find($id);
         $bacaan->postedby = $request->postedby;
         $bacaan->perihal = $request->perihal;
@@ -154,7 +164,6 @@ class backendController extends Controller
             
 
         $bacaan->isi = $request->isi;
-        $bacaan->isibiasa = $request->isibiasa;
         $bacaan->save();
 
         return redirect('/backendindex')->with('message','Berhasil Mengedit Bacaan');

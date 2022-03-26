@@ -21,7 +21,7 @@
         <x-textfield field="judul" label="Judul" type="text" value=""/>
 
         <div class="textarea" style="background-color: white; color:black; margin-bottom:30px;" >
-            <textarea id="summernote" name="isi"></textarea>
+            <textarea class="summernote" name="isi"></textarea>
         </div>
 
         <center><label>Anda bisa melebarkannya dengan menarik pojok kanan bawah pada kolom isi</label></center>
